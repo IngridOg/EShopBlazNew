@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+
+<div class="container">
+    <div>
+        <Header @ref="MyHeaderComponent">
+
+        </Header>
+    </div>
+
+    <div>
+        <CascadingValue Value=UpdateShoppingCart> 
+            @Body
+        </CascadingValue>
+    </div>
+
+    <div>
+        <Footer />
+    </div>
+</div>
+
+@code {
+    protected Header MyHeaderComponent;
+
+    public EventCallback<ShoppingCartModel> UpdateShoppingCart => 
+            EventCallback.Factory.Create<ShoppingCartModel>(this, UpdateShoppingCartTotals);
+
+    void UpdateShoppingCartTotals(ShoppingCartModel shoppingCart) 
+            => MyHeaderComponent.UpdateShoppingCartTotals(shoppingCart);
+
+}

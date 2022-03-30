@@ -1,0 +1,27 @@
+﻿
+
+    <!-- Show carousel on screens up to and including medium sized screens -->
+
+    <Carousel Components="types"/>
+
+    <!-- On larger screens show all info boxes simultaneously -->
+
+    <div class="slide-box d-none d-lg-flex">
+      <InfoBox1/>
+      <InfoBox2/>
+      <InfoBox3/>
+      <InfoBox4/>
+    </div>
+
+
+@code {
+
+    Type[] types =
+    {
+        typeof(InfoBox1),
+        typeof(InfoBox2),
+        typeof(InfoBox3),
+        typeof(InfoBox4),
+    };
+
+}

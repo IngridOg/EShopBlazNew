@@ -1,0 +1,27 @@
+﻿@page "/testCreateCustomer"
+
+<h3>TestCreateCustomer</h3>
+
+
+
+@code {
+    private CreateCustomerModel customer;
+
+    [Inject]
+    public ICustomerService CustService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        customer=new();
+        customer.FirstName="Lars G";
+        customer.LastName="Ögren";
+        customer.Email="lars.g.ogren@gmail.com";
+        customer.PhoneNr="0703344789";
+        customer.StreetAddress= "Ängsvägen 10";
+        customer.ZipCode="68050";
+        customer.City="Ekshärad";
+    
+
+        await CustService.CreateCustomer(customer);
+    }
+}

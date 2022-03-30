@@ -1,0 +1,290 @@
+﻿@page "/shoppingcart"
+
+@inject ICustomerService CustService
+@inject IProductService ProdService
+
+<PageTitle>Kenkata</PageTitle>
+
+
+    <div class="container-fluid banner">
+      <div class="first-text-part">
+        <p>Shopping Cart</p>
+      </div>
+      <div class="second-text-part">
+        <p>&nbsp;&nbsp;>&nbsp;&nbsp;</p>
+      </div>
+      <div class="third-text-part">
+        <p>Checkout</p>
+      </div>
+      <div class="fourth-text-part">
+        <p>&nbsp;&nbsp;>&nbsp;&nbsp;</p>
+      </div>
+      <div class="fifth-text-part">
+        <p>Order Complete</p>
+      </div>
+    </div>
+
+@if (shoppingCart == null)
+{
+    <!-- Loading. Show spinner. -->
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    <div class="content-area container">
+      <div class="cart-area">
+        <table>
+          <colgroup>
+            <col span="6" style="margin: 1rem">
+          </colgroup>
+          <thead>
+            <tr>
+              <th></th>
+              <th><h5>Product</h5></th>
+              <th class="d-none d-md-table-cell"></th>
+              <th><h5>Price</h5></th>
+              <th><h5>Quantity</h5></th>
+              <th><h5>Subtotal</h5></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="product-list">
+
+        @foreach (var detail in shoppingCart.Details)
+        {
+            @if (detail.ProductVariant != null && detail.ProductVariant.OwnProduct != null)
+            {
+                            
+            <tr>
+              <td>
+                <div class="box-remove-button">
+                  <a @onclick="(() => RemoveItem(shoppingCart, detail))">
+                    <img src="images/Close icon.svg" alt="Remove item.">
+                  </a>
+                </div>
+              </td>
+              <td class="d-none d-md-table-cell">
+                <div class="productThumb">
+                  <img src="images/products/@detail.ProductVariant.ImageUrl" alt="Image of product.">
+                </div>
+              </td>
+              <td><p class="mt-3">@detail.ProductVariant.OwnProduct.Name</p></td>
+              <td><p class="mt-3">$@detail.ProductVariant.Price</p></td>
+              <td>
+                <div class="btn-number-of-items-group" role="group" aria-label="Increase or decrease number of items to buy.">
+                    
+                    <button type="button" @onclick="(() => ChangeNumberOfItems(shoppingCart, detail, Change.Decrease))" class="rounded-start border-end-0 btn-decrease">
+                        <p>-</p>
+                    </button>
+                    <button type="button" class="btn-number-of-items"><p>@detail.Quantity</p></button>
+                    <button type="button" @onclick="(() => ChangeNumberOfItems(shoppingCart, detail,  Change.Increase))" class="rounded-end border-start-0 btn-increase">
+                        <p>+</p>
+                    </button>
+                </div>
+              </td>
+              <td class="subtotal">$@detail.SubTotal</td>
+              <td></td>
+            </tr>
+            }
+        }
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row-below-shopping-cart">
+        <div class="box-apply-coupon">
+          <div class="container">
+            <p>If you have a coupon code, please apply it below.</p>
+
+            <!-- Apply coupon field -->
+            <div class="btn-group btn-apply-coupon-group" role="group"
+              aria-label="Apply coupon button group with apply button">
+              <input type="text" class="form-control  btn-check input-apply-coupon mt-4" placeholder="Coupon code"
+                aria-label="Apply coupon field" aria-describedby="btnGroupAddon">
+              <button type="button" class="btn btn-apply-coupon">Apply&nbsp;Coupon</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-cart-totals mt-2">
+        <button class="btn-cart-totals">CART TOTALS</button>
+        <div class="container mt-3">
+          <div class="row-cart-totals">
+            <h6>Subtotal</h6>
+            <h6 class="theme">$@shoppingCartSubTotal</h6>
+          </div>
+          <hr class="divider">
+          <div class="row-cart-totals">
+            <div>
+              <h6>Shipping</h6>
+            </div>
+            <div>
+
+              <form name="shippingForm" class="shipping-form">
+                <label>Flat rate:
+                  <label class="theme"> $@Globals.shippingFlatRate
+                    <input type="radio" value="shipFlatRate" name="shippingRadio" class="theme" @onchange="(() => 
+                        UpdateShipping(shoppingCart, TypeOfShipping.FlatRate, Globals.shippingFlatRate))" checked>
+                  </label>
+                </label>
+                <label>Free shipping:
+                  <label class="theme"> $@Globals.shippingFree
+                    <input type="radio" value="shipFree" name="shippingRadio" class="theme" @onchange="(() => 
+                        UpdateShipping(shoppingCart, TypeOfShipping.Free, Globals.shippingFree))">
+                  </label>
+                </label>
+                <label>Local pickup:
+                  <label class="theme">$@Globals.shippingLocalPickup
+                    <input type="radio" value="shipLocalPickUp" name="shippingRadio" class="theme" @onchange="(() => 
+                        UpdateShipping(shoppingCart, TypeOfShipping.LocalPickup, Globals.shippingLocalPickup))">
+                  </label>
+                </label>
+                <label>Shipping to AL.</label>
+                <label mt-5>Change address</label>
+              </form>
+            </div>
+          </div>
+          <hr class="divider">
+          <div class="row-cart-totals">
+            <h5>TOTAL</h5>
+            <h5 class="theme">$@shoppingCartTotal</h5>
+          </div>
+          <div class="row-cart-totals mt-3">
+            <button type="button" class="btn-proceed-to-checkout">PROCEED TO CHECKOUT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+}
+
+
+@code {
+    [CascadingParameter]
+    protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
+
+    private ProductModel? product;
+    private CustomerModel? customer;
+    private ShoppingCartModel? shoppingCart;
+
+    private int shippingFee = Globals.shippingFlatRate;
+    private int shoppingCartSubTotal;
+    private int shoppingCartTotal;
+
+
+    public enum Change
+    {
+        Decrease = 0,
+        Increase = 1
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        if (User != null && User.IsAuthenticated() && User.CustomerId != null)
+        {
+            customer = await CustService.GetCustomer((int)User.CustomerId);
+            if (customer != null)
+            {
+                // In this simplified version there is only one shopping cart per customer.
+                shoppingCart = customer.ShoppingCartModels.ToList()[0];
+            }
+            else
+            {
+                // Use a shopping cart that is not yet connected to any customer.
+                shoppingCart = Globals.ShoppingCart;
+            }
+        }
+        else
+        {
+            // Use a shopping cart that is not yet connected to any customer.
+            shoppingCart = Globals.ShoppingCart;
+        }
+
+        if (shoppingCart != null)
+        {
+            shoppingCart.ShippingType = TypeOfShipping.FlatRate;
+
+            foreach (var detail in shoppingCart.Details)
+            {
+                if (detail.ProductVariant != null)
+                {
+                    product = await ProdService.GetProduct((int)detail.ProductVariant.ProductId);
+
+                    if (product != null)
+                        detail.ProductVariant.OwnProduct = product;                    
+                }
+
+            }
+
+            // Update Cart Totals in header.
+            UpdateShoppingCart.InvokeAsync(shoppingCart);
+
+            // Update Cart Totals on current page.
+            UpdateShoppingCartTotals(shoppingCart);
+        }
+    }
+
+    public async Task ChangeNumberOfItems(ShoppingCartModel _shoppingCart, DetailModel _detail, Change _change)
+    {
+        if (_change == Change.Decrease && _detail.Quantity > 0)
+        {
+            _detail.Quantity--;
+        }
+        else if (_change == Change.Increase && _detail.Quantity < 99)
+        {
+            _detail.Quantity++;
+        }
+        _detail.SubTotal = (int)_detail.Quantity * (int)_detail.ProductVariant.Price;
+
+        // Update Cart Totals in header.
+        UpdateShoppingCart.InvokeAsync(_shoppingCart);
+
+        // Update Cart Totals on current page.
+        UpdateShoppingCartTotals(_shoppingCart);
+    }
+
+    public async Task RemoveItem(ShoppingCartModel _shoppingCart, DetailModel _detail)
+    {
+        _shoppingCart.Details.Remove(_detail);
+
+        // Update Cart Totals in header.
+        UpdateShoppingCart.InvokeAsync(_shoppingCart);
+
+        // Update Cart Totals on current page.
+        UpdateShoppingCartTotals(_shoppingCart);
+
+        await InvokeAsync(() => this.StateHasChanged());
+    }
+
+    public void UpdateShoppingCartTotals(ShoppingCartModel _shoppingCart)
+    {
+        shoppingCartSubTotal = 0;
+
+        foreach (var item in _shoppingCart.Details)
+            if (item.ProductVariant != null)
+                shoppingCartSubTotal += (int)item.ProductVariant.Price * item.Quantity;
+
+        shoppingCartTotal = shoppingCartSubTotal + shippingFee;
+    }
+
+    public void UpdateShipping(ShoppingCartModel _shoppingCart, TypeOfShipping _shippingType, int _newShippingFee)
+    {
+        _shoppingCart.ShippingType = _shippingType;
+        shippingFee = _newShippingFee;
+
+        // Update Cart Totals in header.
+        UpdateShoppingCart.InvokeAsync(_shoppingCart);
+
+        // Update Cart Totals on current page.
+        UpdateShoppingCartTotals(_shoppingCart);
+    }
+
+}

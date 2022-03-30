@@ -1,0 +1,8 @@
+@function set-color($value) {
+    @if (lightness($value) > 75) {
+        @return darken($value, 60%);
+    }
+    @else {
+        @return lighten($value, 40%);
+    }
+}

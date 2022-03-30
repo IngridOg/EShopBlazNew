@@ -1,0 +1,92 @@
+﻿@inject NavigationManager NavigationManager
+
+<div class="container category-grid-container">
+
+    <div class="category-item-container men">
+        <div class="category-grid-item">
+            
+            <a @onclick="(() => ShowCategory(ProductCategory.Men))">
+                <div class="image">
+                    <img src="images/products/men2.jpg" alt="Men's fashion">
+                </div>
+            </a>
+            <span class="badge col-6">Men</span>
+        </div>
+    </div>
+
+    <div class="category-item-container women">
+        <div class="category-grid-item">
+            <a @onclick="(() => ShowCategory(ProductCategory.Women))">
+                <div class="image">
+                    <img src="images/products/women.jpg" alt="Women's fashion">
+                </div>
+            </a>
+            <span class="badge col-6">Women</span>
+        </div>
+    </div>
+
+    <div class="category-item-container kids">
+        <div class="category-grid-item">
+            <a @onclick="(() => ShowCategory(ProductCategory.Kids))">
+                <div class="image">
+                    <img src="images/products/kids.jpg" alt="Kid's fashion">
+                </div>
+            </a>
+            <span class="badge col-6">Kids</span>
+        </div>
+    </div>
+
+    <div class="category-item-container shoes">
+        <div class="category-grid-item">
+            <a @onclick="(() => ShowCategory(ProductCategory.Shoes))">
+                <div class="image">
+                    <img src="images/products/shoes.jpg" alt="Shoes">
+                </div>
+            </a>
+            <span class="badge col-6">Shoes</span>
+        </div>
+    </div>
+
+    <div class="category-item-container hats">
+        <div class="category-grid-item">
+            <a @onclick="(() => ShowCategory(ProductCategory.Hats))">
+                <div class="image">
+                    <img src="images/products/hatc.jpg" alt="Hats">
+                </div>
+            </a>
+            <span class="badge col-6">Hats</span>
+        </div>
+    </div>
+
+    <div class="category-item-container sunglasses">
+        <div class="category-grid-item">
+            <a @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">
+                <div class="image">
+                    <img src="images/products/sunglasses_wide.jpg" alt="Sunglasses">
+                </div>
+            </a>
+            <span class="badge col-6">Sunglasses</span>
+        </div>
+    </div>
+
+    <div class="category-item-container watches">
+        <div class="category-grid-item">
+            <a @onclick="(() => ShowCategory(ProductCategory.Watches))">
+                <div class="image">
+                    <img src="images/products/watches.webp" alt="Watches">
+                </div>
+            </a>
+            <span class="badge col-6">Watches</span>
+        </div>
+    </div>
+
+</div>
+
+
+@code {
+
+    void ShowCategory(ProductCategory category)
+    {
+        NavigationManager.NavigateTo($"shop/{(int)category}");
+    }
+}

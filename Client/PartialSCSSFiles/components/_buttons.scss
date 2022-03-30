@@ -1,0 +1,307 @@
+
+.btn {
+    font-family: $default-font;
+    font-weight: $regular;
+}
+
+.btn-primary {
+    @extend .btn;
+    background-color: $eshop-theme-color;
+    border-color: $eshop-theme-contrast;
+    border: none;
+    color: white;
+}
+
+.btn-secondary {
+    @extend .btn; 
+    background-color: $eshop-midnightblue;
+    border-color: $eshop-midnightblue-contrast;
+    color: white;
+}
+
+.btn-tertiary {
+    @extend .btn; 
+    background-color: white;
+    border-color: $line-bullet-color;
+    color: $eshop-theme-color;  
+}
+
+.btn-add-to-cart {
+    @extend .btn-primary;
+    min-width: 148px;
+    min-height: 37px;
+    border-radius: 20px;
+    padding-left: 1.3rem;
+    margin-left: 3rem;
+}
+
+.btn-apply-coupon {
+    @extend .btn-primary;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -173%);
+    width: 151px;
+    height: 38px;
+    border-radius: 23px;
+}
+
+.btn-apply-coupon-group {
+    display: block;
+}
+
+.btn-browse {
+    @extend .btn-primary;
+    font-size: 18px;
+    padding: 0 9px;
+    min-width: 210px;
+    max-width: 570px;
+}
+
+.btn-browse-arrow {
+    @extend .btn-primary;
+    font-size: 18px;
+    padding: 3px 20px;
+}
+
+.btn-favourites {
+    margin-right: 0.5rem;
+}
+
+.btn-my-account, .btn-favourites, .btn-shopping-cart {
+    color: $eshop-midnightblue;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-learn-more {
+    @extend .btn-tertiary;
+    font-size: 18px;
+    font-weight: $medium;
+    min-width: 172px;
+    min-height: 54px;
+    border-radius: 27px;
+    padding: 15px 30px;
+}
+
+.btn-number-of-items-group {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    .btn-number-of-items {
+        @extend .btn-tertiary;
+        color: $eshop-midnightblue;
+        width: 30px;
+        height: 36px;
+        border: 1px solid $dark-grey;
+        padding-top: 3px;
+    }
+
+    .btn-decrease {
+        @extend .btn-number-of-items;
+    }
+
+    .btn-increase {
+        @extend .btn-number-of-items;
+    }
+}
+
+.btn-proceed-to-checkout {
+    @extend .btn-primary;
+    font-weight: $medium;
+    min-width: 290px;
+    min-height: 54px;
+    border-radius: 27px;
+    padding: 15px 43px 15px 43px;
+}
+
+.btn-search {
+    @extend .btn-primary;
+    padding: 0 9px;
+    border-radius: 23px;
+    max-width: 46px;
+    height: 45px;
+}
+
+.btn-select-category {
+    @extend .btn-primary;
+    width: 145px;
+    height: 45px;
+    padding: 0 9px;
+}
+
+.btn-shop {
+    @extend .btn-tertiary;
+    font-size: 18px;
+    font-weight: $medium;
+    width: 154px;
+    height: 54px;
+    border-radius: 27px;
+    padding: 15px 30px;
+}
+
+.btn-special-offer {
+    @extend .btn-primary;
+    font-weight: $medium;
+    min-width: 156px;
+    height: 37px;;
+    border-radius: 20px;
+    padding: 7px 20px 5px 20px;
+}
+
+.btn-update-cart {
+    @extend .btn-secondary; 
+    font-size: 18px;
+    font-weight: $medium;  
+    min-width: 156px;
+    height: 54px;
+    border-radius: 27px;
+}
+
+
+
+.btn-check:focus + .btn, .btn:focus {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
+//    background-color: $eshop-theme-contrast;
+}
+
+
+
+.btn-add-to-cart:hover, .btn-add-to-cart:focus, .btn-add-to-cart:active,
+.btn-check:focus + .btn-add-to-cart, .btn-check:checked + .btn-add-to-cart, .btn-check:active + .btn-add-to-cart,
+
+.btn-apply-coupon:hover, .btn-apply-coupon:focus, .btn-apply-coupon:active, 
+.btn-check:focus + .btn-apply-coupon, .btn-check:checked + .btn-apply-coupon, .btn-check:active + .btn-apply-coupon,
+
+.btn-browse-arrow:hover,  .btn-browse-arrow:focus, .btn-browse-arrow:active, .show > .btn-browse-arrow.dropdown-toggle,
+.btn-check:focus + .btn-browse-arrow, .btn-check:checked + .btn-browse-arrow, .btn-check:active + .btn-browse-arrow,
+
+.btn-proceed-to-checkout:hover, .btn-proceed-to-checkout:focus,.btn-proceed-to-checkout:active,
+.btn-check:focus + .btn-proceed-to-checkout, .btn-check:checked + .btn-proceed-to-checkout, .btn-check:active + .btn-proceed-to-checkout,
+
+.btn-search:hover,  .btn-search:focus, .btn-search:active, 
+.btn-check:focus + .btn-search, .btn-check:checked + .btn-search, .btn-check:active + .btn-search,
+
+.btn-select-category:hover, .btn-select-category:focus, .btn-select-category:active, .show > .btn-select-category.dropdown-toggle,
+.btn-check:focus + .btn-select-category, .btn-check:checked + .btn-select-category, .btn-check:active + .btn-select-category,
+
+.btn-special-offer:hover, .btn-special-offer:focus, .btn-special-offer.active,
+.btn-check:focus + .btn-special-offer, .btn-check:checked + .btn-special-offer, .btn-check:active + .btn-special-offer {    
+
+    background-color: $eshop-theme-contrast;
+    border-color: $eshop-theme-color;
+    color: white;
+}
+
+
+.btn-learn-more:hover, .btn-learn-more:focus, .btn-learn-more.active,
+.btn-check:focus + .btn-learn-more, .btn-check:checked + .btn-learn-more, .btn-check:active + .btn-learn-more,
+
+.btn-shop:hover, .btn-shop:focus, .btn-shop.active,
+.btn-check:focus + .btn-shop, .btn-check:checked + .btn-shop, .btn-check:active + .btn-shop {
+    background-color: white;
+    border-color: $dark-grey;
+}
+
+.btn-decrease:hover, .btn-decrease:focus, .btn-decrease.active,
+.btn-check:focus + .btn-decrease, .btn-check:checked + .btn-decrease, .btn-check:active + .btn-decrease, 
+
+.btn-increase:hover, .btn-increase:focus, .btn-increase.active,
+.btn-check:focus + .btn-increase, .btn-check:checked + .btn-increase, .btn-check:active + .btn-increase {    
+
+    background-color: $eshop-theme-color;
+    p {
+        color: white;
+    }
+
+}
+
+.btn-update-cart:hover, .btn-update-cart:focus, .btn-update-cart:active,
+.btn-check:focus + .btn-update-cart, .btn-check:checked + .btn-update-cart, .btn-check:active + .btn-update-cart {    
+    
+    color: $eshop-theme-color;
+}
+
+.btn-browse:hover,  .btn-browse:focus, .btn-browse:active {
+    color: white;  
+}
+
+.btn-favourites:hover i, .btn-favourites:focus i, .btn-favourites.active i,
+.btn-check:focus + .btn-favourites i, .btn-check:checked + .btn-favourites i, .btn-check:active + .btn-favourites i {
+    transform: scale(1.5);
+}
+
+
+.btn-card-title {
+    @extend .btn-secondary;
+    width: 100%;
+    height: 64px;
+    border-radius: 0 0 6px 6px;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    display: inline-block;
+}
+
+.btn-cart-totals {
+    @extend .btn-secondary;    
+    font-weight: $medium;
+    font-size: 24px;
+    width: 350px;
+    height: 51px;
+    border-color: $secondary;
+    color: $eshop-theme-color;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 6px;
+    margin: -2px -2px;
+}
+
+.box-remove-button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-remove-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display:block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+
+@include md {
+    .btn-apply-coupon {
+        font-family: $default-font;
+        font-weight: $regular;
+        color: $white;
+        background-color: $eshop-theme-color;
+        border-color: $eshop-theme-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-62%, -173%);
+        width: 151px;
+        height: 38px;
+        border-radius: 23px;
+    }
+
+    .btn-update-cart {
+        width: 178px;
+    }
+}

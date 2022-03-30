@@ -1,0 +1,49 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Kenkata</PageTitle>
+
+<div class="home-area">
+    <div class="container main-part">
+
+        <div class="second-colummn">
+            <img src="images/products/2x2_jacka_damherr_start_cut.jpg" class="d-sm-none"
+                    style="position:relative; left: 75%; margin-left:-100%; transform:scaleX(-1);"
+                    alt="Copule prepared for out-door">
+            <img src="images/products/2x2_jacka_damherr_start_cut.jpg" class="d-none d-sm-flex d-lg-none"
+                    style="overflow: hidden; position: absolute; left: 75%; margin-left: -48%; clip: rect(0px,600px, 600px,0px); clip: rect(0px,600px,600px,230px); transform:scaleX(-1);"
+                    alt="Copule prepared for out-door">
+            <img src="images/products/2x2_jacka_damherr_start_cut.jpg" class="d-none d-lg-flex"
+                    style="float: right; transform:scaleX(-1);" alt="Copule dressed for out-door">
+        </div>
+
+        <div class="first-column">
+            <h2>Shopping is</h2>
+            <h1>MORE FUN</h1>
+            <div class="ingress">
+                <p>
+                    Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus. Quisque
+                    quis erat sed
+                </p>
+            </div>
+            <br>
+            <br> 
+              <a @onclick="(() => ShowCategory(ProductCategory.NoCategory))" class="btn btn-shop" role="button">SHOP NOW</a>
+        </div>
+    </div>
+</div>
+
+<InfoBoxes/>
+
+<CategoryGrid/>
+
+@code {
+    [CascadingParameter]
+    protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
+
+
+    void ShowCategory(ProductCategory category)
+    {
+        NavigationManager.NavigateTo($"shop/{(int)category}");
+    }
+}

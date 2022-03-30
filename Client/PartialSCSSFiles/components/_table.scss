@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+
+    th, td {
+        color: $eshop-midnightblue;
+        padding:0.5rem 0.5rem;
+        text-align: left;
+    }
+
+    th {
+        border-bottom: 1px solid $dark-grey;
+    }
+    td {
+        border-bottom: 1px solid $line-bullet-color;
+    }
+}

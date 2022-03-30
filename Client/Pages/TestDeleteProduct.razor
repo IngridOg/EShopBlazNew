@@ -1,0 +1,19 @@
+﻿@page "/testDeleteProduct"
+
+<h3>TestDeleteProduct</h3>
+
+
+
+@code {
+
+    [Inject]
+    public IProductService ProdService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ProdService.DeleteProduct(7);
+        await ProdService.DeleteProduct(8);
+        await ProdService.DeleteProduct(9);
+        await ProdService.DeleteProduct(10);
+    }
+}

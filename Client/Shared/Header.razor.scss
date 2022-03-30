@@ -1,0 +1,290 @@
+﻿@use '../PartialSCSSFiles/helpers' as *;
+
+/*header {
+    margin-bottom: 0px;
+}*/
+
+.dropdown-menu {
+    background-color: $eshop-theme-contrast;
+
+    a:hover, .active {
+        color: $eshop-midnightblue;
+    }
+
+    a:focus {
+        background-color: $dark-grey;
+    }
+
+    .dropdown-item {
+        color: $white;
+    }
+}
+
+
+
+/* Top row */
+
+#top-row {
+    background-color: $eshop-theme-color;
+    height: 3.0rem;
+    padding: 0;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+
+    .navbar {
+        padding: 0;
+    }
+
+    a {
+        font-size: 18px;
+        color: white;
+        padding: 0;
+        margin-top: 4px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .first-section {
+        flex: 60%;
+
+        a {
+            margin-right: 1rem;
+        }
+    }
+
+    .second-section {
+        display: none;
+    }
+
+    .menu-mobile {
+        flex: 40%;
+
+        .nav-item {
+            background-color: $eshop-theme-contrast;
+            padding: 0rem 1rem 1rem 1rem;
+            z-index: 5;
+        }
+
+        .dropdown-menu {
+            background-color: $eshop-theme-color;
+
+            .dropdown-item {
+                padding: 0rem 0rem 0rem 0.5rem;
+            }
+        }
+    }
+
+
+    .nav-item a:hover, .nav-item .active {
+        color: $eshop-midnightblue;
+    }
+
+    @include lg {
+        height: 2rem;
+        padding-top: 0;
+
+        .second-section {
+            flex: 40%;
+            display: flex;
+
+            a {
+                margin-left: 2rem;
+            }
+        }
+
+        .menu-mobile {
+            display: none;
+        }
+    }
+}
+
+
+/* Top middle row */
+
+#top-middle-row {
+    margin-bottom: 0.5rem;
+
+    .btn-group-search-field {
+        display: none;
+    }
+
+    .btn-favourites {
+        display: block;
+    }
+
+    .btn-group-misc {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    .misc-buttons {
+        display: flex;
+        flex-direction: column;
+
+        .btn-my-account {
+            justify-content: end;
+            padding: 0;
+        }
+
+        .btn-favourites {
+            display: none;
+        }
+
+        .btn-shopping-cart {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding: 0;
+        }
+    }
+
+    @include sm {
+        .btn-favourites {
+            display: none;
+        }
+
+        .misc-buttons {
+            flex-direction: row;
+            align-items: center;
+
+            .btn-my-account {
+                margin-right: 0.5rem;
+            }
+
+            .btn-favourites {
+                display: block;
+            }
+        }
+    }
+
+    @include lg {
+
+        .btn-group-search-field {
+            display: flex;
+        }
+    }
+}
+
+
+/* Main menu row */
+
+.menu-desktop {
+    display: none;
+}
+
+
+#top-extra-row1-on-mobile {
+
+    .btn-special-offer {
+        width: 100%;
+        display: block;
+        margin-top: 1rem;
+    }
+
+    @include sm {
+        .btn-special-offer {
+            display: none;
+        }
+    }
+}
+
+#main-menu {
+
+    .nav-item a {
+        color: $eshop-midnightblue;
+        font-size: 18px;
+        margin-right: 1rem;
+    }
+
+    .no-dropdown {
+        .nav-item a:after, .nav-item .active:after {
+            content: "";
+            display: block;
+            border-bottom: 3px solid transparent;
+        }
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+
+        a {
+            color: white;
+        }
+
+        a:hover, .active {
+            color: $eshop-midnightblue;
+        }
+    }
+
+    .no-dropdown {
+        .nav-item a:hover:after, .nav-item .active:after {
+            border-color: $eshop-theme-color;
+        }
+    }
+
+    .btn-special-offer {
+        display: none;
+    }
+
+    @include sm {
+        .btn-special-offer {
+            display: block;
+        }
+    }
+}
+
+
+/* Another extra row for small screens. */
+
+#top-extra-row2-on-mobile {
+    .btn-group-search-field {
+        display: flex;
+    }
+
+    @include lg {
+        .btn-group-search-field {
+            display: none;
+        }
+    }
+}
+
+
+
+.bi-list {
+    font-size: 2rem;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-search-product {
+    font-family: $default-font;
+    font-size: 14px;
+    height: 45px;
+    min-width: 304px;
+    color: $dark-grey;
+    border-radius: 23px 0 0 23px;
+}
+
+@include lg {
+    /*    header {
+        margin-bottom: 0;
+    }*/
+
+    .nav-item {
+        background-color: transparent;
+    }
+
+    .menu-desktop {
+        display: block;
+    }
+}
+
+body {
+}

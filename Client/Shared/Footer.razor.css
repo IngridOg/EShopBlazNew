@@ -1,0 +1,120 @@
+.footer1 {
+  background-color: #0E153D;
+  display: grid;
+  grid-template-areas: "divider" "info";
+  margin-top: 6rem;
+}
+.footer1 .dividing-line {
+  grid-area: divider;
+  background-color: #20d3c2;
+  height: 3px;
+}
+.footer1 .info-columns {
+  grid-area: info;
+  display: grid;
+  grid-template-areas: "first-column" "second-column" "third-column" "fourth-column";
+  margin-top: 2rem;
+}
+.footer1 .first-column {
+  grid-area: first-column;
+  padding-right: 1rem;
+}
+.footer1 .first-column .small-text {
+  font-size: 14px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.footer1 .second-column {
+  grid-area: second-column;
+  padding-right: 1rem;
+}
+.footer1 .third-column {
+  grid-area: third-column;
+  padding-right: 1rem;
+}
+.footer1 .fourth-column {
+  grid-area: fourth-column;
+}
+.footer1 h6 {
+  font-size: 18px;
+  margin-top: 2.8rem;
+  margin-bottom: 2.2rem;
+}
+.footer1 p {
+  color: white;
+}
+.footer1 a, .footer1 a:link {
+  color: white;
+  text-decoration: none;
+}
+.footer1 a:hover {
+  color: #20d3c2;
+  text-decoration: underline;
+}
+@media (min-width: 576px) {
+  .footer1 .info-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "first-column second-column third-column fourth-column";
+  }
+  .footer1 .first-column {
+    grid-area: first-column;
+  }
+  .footer1 .second-column {
+    grid-area: second-column;
+  }
+  .footer1 .third-column {
+    grid-area: third-column;
+  }
+  .footer1 .fourth-column {
+    grid-area: fourth-column;
+  }
+}
+
+.footer2 {
+  background-color: black;
+  height: 6rem;
+}
+.footer2 .copyright-area {
+  flex-direction: column;
+  display: flex;
+  align-items: start;
+}
+.footer2 .copyright-area .credit-cards {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.footer2 .copyright-area .credit-cards img {
+  width: calc((100% - 41px) / 5);
+}
+.footer2 .copyright-area .copyright-text1 {
+  display: none;
+}
+.footer2 .copyright-area .copyright-text2 {
+  color: white;
+  margin-top: 13px;
+  display: flex;
+}
+@media (min-width: 576px) {
+  .footer2 {
+    height: 4.5rem;
+  }
+  .footer2 .copyright-area {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer2 .copyright-area .credit-cards {
+    display: flex;
+  }
+  .footer2 .copyright-area .copyright-text1 {
+    color: white;
+    margin-top: 1.6rem;
+    display: flex;
+  }
+  .footer2 .copyright-area .copyright-text2 {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Footer.razor.css.map */

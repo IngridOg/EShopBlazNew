@@ -1,0 +1,42 @@
+﻿@using System.Threading
+
+<div class="d-block d-lg-none">
+    <div>
+        @Render(currentPosition);
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Type[] Components { get; set; }
+
+    int currentPosition;
+    CancellationTokenSource cts;
+    CancellationToken ct;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cts = new CancellationTokenSource();
+        ct = cts.Token;
+        Walkthrough();
+    }
+
+    public async Task Walkthrough()
+    {
+        while (!ct.IsCancellationRequested)
+        {
+            await Task.Delay(2500, ct);
+            currentPosition++;
+            await InvokeAsync(() => this.StateHasChanged());
+        }
+    }
+
+    public RenderFragment Render(int position)
+    {
+        return RenderTreeBuilder =>
+        {
+            RenderTreeBuilder.OpenComponent(0, Components[Math.Abs(position % Components.Length)]);
+            RenderTreeBuilder.CloseComponent();
+        };
+    }
+}

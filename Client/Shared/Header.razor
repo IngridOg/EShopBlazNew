@@ -1,0 +1,385 @@
+﻿@using System.Collections
+@using EShopBlazNew.Shared.Models
+@inject NavigationManager NavigationManager
+
+    <!-- Top row -->
+
+    <section id="top-row">
+
+      <div class="container flex-container position-relative">
+        <nav class="navbar navbar-expand-lg navbar-light first-section">
+
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+
+            <div class="navbar-collapse" id="navbarSupportedContent1">
+
+              <!-- <ul class="navbar-nav d-flex flex-row first-section"> -->
+              <ul class="navbar-nav d-flex flex-row position-absolute top-0">
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">ENG</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <li><a class="dropdown-item" href="#">ENG</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    USD
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <li><a class="dropdown-item" href="#">USD</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+
+        <!-- Top row menu to be shown on large screens. -->
+
+        <nav class="navbar navbar-expand-lg navbar-light second-section">
+          <a class="navbar-brand" href="#"></a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent2">
+
+            <div class="justify-content-end">
+
+              <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Newsletter</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact&nbspus</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">FAQs</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <!-- </div> -->
+        </nav>
+
+
+        <!-- Placement of menu for mobile screens. -->
+
+        <nav class="navbar navbar-expand-lg navbar-light menu-mobile">
+          <!-- <div class="container-fluid"> -->
+
+          <!-- invisible navbar brand to keep toggler-icon to the right -->
+          <a class="navbar-brand" href="#"></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav no-dropdown">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav dropdowns">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                  <li><a class="dropdown-item" href="#">Shop by brand</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sale</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                  <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                  <li><a class="dropdown-item" href="#">Featured Products</a></li>
+                  <li><a class="dropdown-item" href="#">Top Sellers</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
+                  <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.NoCategory}")">Shop</a></li>
+                  <li><a class="dropdown-item" href="shoppingCart">Shopping Cart</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- </div> -->
+        </nav>
+      </div>
+
+    </section>
+
+
+    <!-- Top middle row -->
+
+    <section id="top-middle-row">
+
+      <div class="container box mt-1 align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"><img src="images/logo.svg" alt=""></a>
+
+        <!-- Search field -->
+        <div class="btn-group btn-group-search-field" role="group"
+          aria-label="Search field button group with nested category dropdown">
+          <input type="search" class="form-control input-search-product" placeholder="Search products"
+            aria-label="Product search field" aria-describedby="btnGroupAddon">
+
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-select-category dropdown-toggle"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-search"><i class="bi-search"></i><span class="ms-1"></span></button>
+        </div>
+
+        <!-- Miscellaneous buttons -->
+        <div class="btn-group btn-group-misc" role="group" aria-label="Miscellaneous buttons">
+          <button type="button" class="btn btn-favourites"><i class="bi-heart"></i><span class="ms-1"></span></button>
+          <div class="misc-buttons">
+            <button type="button" class="btn btn-my-account"><i class="bi-person"></i><span class="ms-2"></span>My
+              account</button>
+            <button type="button" class="btn btn-favourites"><i class="bi-heart"></i><span class="ms-1"></span></button>
+            <button type="button" class="btn btn-shopping-cart" @onclick="ShowShoppingCart"><i class="bi-bag"></i><span
+                class="ms-2"></span>$@shoppingCartTotal</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="top-extra-row1-on-mobile">
+      <div class="container">
+        <button type="button" class="btn btn-special-offer block">SPECIAL OFFER</button>
+      </div>
+    </section>
+
+
+    <!-- Main menu row -->
+
+    <section id="main-menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+          <!-- Browse categories -->
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-browse">
+              <div class="d-flex align-items-center">
+                <i class="bi-list"></i><span class="ms-1">Browse Categories</span>
+              </div>
+            </button>
+
+            <button type="button" class="btn btn-browse-arrow dropdown-toggle dropdown-toggle-split"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
+                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+            </ul>
+          </div>
+
+
+          <!-- Main menu -->
+          <div class="menu-desktop">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+              <ul class="navbar-nav no-dropdown">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav dropdowns">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Shop
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                    <li><a class="dropdown-item" href="#">Shop by brand</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sale</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Products
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                    <li><a class="dropdown-item" href="#">Featured Products</a></li>
+                    <li><a class="dropdown-item" href="#">Top Sellers</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Pages
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
+                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.NoCategory))">Shop</a></li>
+                    <li><a class="dropdown-item" @onclick="ShowShoppingCart">Shopping Cart</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <button type="button" class="btn btn-special-offer">SPECIAL OFFER</button>
+        </div>
+
+
+
+      </nav>
+    </section>
+
+    <section id="top-extra-row2-on-mobile">
+
+      <!-- Search field -->
+      <div class="container mb-2">
+        <div class="btn-group btn-group-search-field" role="group"
+          aria-label="Search field button group with search button">
+          <input type="search" class="form-control input-search-product" placeholder="Search products"
+            aria-label="Product search field" aria-describedby="btnGroupAddon">
+          <button type="button" class="btn btn-search"><i class="bi-search"></i><span class="ms-1"></span></button>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+@code {
+    public int shoppingCartTotal = 0;
+
+    void ShowCategory(ProductCategory category)
+    {
+        NavigationManager.NavigateTo($"shop/{(int)category}");
+    }
+
+    void ShowShoppingCart()
+    {
+        NavigationManager.NavigateTo($"shoppingcart");
+    }
+
+    void ShowShoppingCart(int id)
+    {
+        NavigationManager.NavigateTo($"shoppingcart/{(int)id}");
+    }
+
+    public async Task UpdateShoppingCartTotals(ShoppingCartModel shoppingCart)
+    {
+        shoppingCartTotal = 0;
+
+        foreach (var item in shoppingCart.Details)
+            if (item.ProductVariant != null)
+                shoppingCartTotal += (int)item.ProductVariant.Price * item.Quantity;
+
+        if (shoppingCart.ShippingType != TypeOfShipping.NoValue)
+            switch (shoppingCart.ShippingType)
+            {
+                case TypeOfShipping.FlatRate:
+                    shoppingCartTotal += Globals.shippingFlatRate;
+                    break;
+                case TypeOfShipping.Free:
+                    shoppingCartTotal += Globals.shippingFree;
+                    break;
+                case TypeOfShipping.LocalPickup:
+                    shoppingCartTotal += Globals.shippingLocalPickup;
+                    break;
+                default:
+                    break;
+            }
+
+        await InvokeAsync(() => this.StateHasChanged());
+    }
+}

@@ -1,0 +1,66 @@
+.home-area {
+  background-color: #EEEEEE;
+  min-height: 600px;
+}
+.home-area .main-part {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "second" "first";
+  /*  Crop and center the image. */
+}
+.home-area .main-part .first-column {
+  grid-area: first;
+  height: 600px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-area .main-part .first-column h1 {
+  color: #20d3c2;
+}
+.home-area .main-part .first-column h2 {
+  color: #0E153D;
+}
+.home-area .main-part .first-column p {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.home-area .main-part .second-column {
+  grid-area: second;
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  overflow: hidden;
+}
+.home-area .main-part .second-column img {
+  position: relative;
+  left: 75%;
+  margin-left: -100%;
+}
+@media (min-width: 576px) {
+  .home-area .main-part {
+    grid-template-columns: 350px 1fr;
+    grid-template-areas: "first second";
+  }
+  .home-area .main-part .first-column {
+    grid-area: first;
+    height: 600px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .home-area .main-part .first-column p {
+    text-align: start;
+  }
+  .home-area .main-part .second-column {
+    grid-area: second;
+  }
+}
+
+/*# sourceMappingURL=Index.razor.css.map */

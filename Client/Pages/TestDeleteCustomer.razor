@@ -1,0 +1,16 @@
+﻿@page "/testDeleteCustomer"
+
+<h3>TestDeleteCustomer</h3>
+
+
+
+@code {
+
+    [Inject]
+    public ICustomerService CustService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {  
+        await CustService.DeleteCustomer(1);
+    }
+}

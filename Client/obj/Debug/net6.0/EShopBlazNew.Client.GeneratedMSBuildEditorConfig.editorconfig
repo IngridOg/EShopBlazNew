@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = EShopBlazNew.Client
+build_property.RootNamespace = EShopBlazNew.Client
+build_property.ProjectDir = C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestCreateCustomer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdENyZWF0ZUN1c3RvbWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestCreateProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdENyZWF0ZVByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestDeleteCustomer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdERlbGV0ZUN1c3RvbWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestDeleteProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdERlbGV0ZVByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestGetCustomers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdEdldEN1c3RvbWVycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestGetProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdEdldFByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestGetProducts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdEdldFByb2R1Y3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/Carousel.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhcm91c2VsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-eeph8745mv
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-budddxubjh
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/Shop.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-bdzfad2hph
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/ShoppingCart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdDYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-p6i7mgnv0u
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/CategoryGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhdGVnb3J5R3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-hsfe35g925
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6pw48n2g4l
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-mkzsddn3xa
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/InfoBox1.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZm9Cb3gxLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-kpsjv2lclv
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/InfoBox2.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZm9Cb3gyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-noqb8adhp1
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/InfoBox3.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZm9Cb3gzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-cekrkxsksx
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/InfoBox4.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZm9Cb3g0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-6x89465jgg
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/InfoBoxes.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEluZm9Cb3hlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-7y1gaz5f4e
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vc6dzsxb0u
+
+[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-y4jxe20t25

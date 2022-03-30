@@ -1,0 +1,81 @@
+﻿@use '../PartialSCSSFiles/helpers' as *;
+
+.slide-box {
+
+    .layout-outer {
+        height: 137px;
+        min-width: 250px;
+        margin: 6rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $eshop-theme-opaque8;
+
+        img {
+            margin: 0.3rem;
+            width: 64px;
+            height: 64px;
+            flex: 25%;
+        }
+
+        .layout-inner {
+            margin: 0.3rem;
+            flex: 75%;
+
+            h7 {
+                color: $eshop-theme-color;
+            }
+        }
+    }
+
+    .dark-info-box {
+        height: 137px;
+        min-width: 250px;
+        margin: 6rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $eshop-theme-color;
+
+        img {
+            width: 64px;
+            height: 64px;
+            flex: 25%;
+        }
+
+        .layout-inner {
+            margin-left: 1rem;
+            flex: 75%;
+
+            h7 {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+        }
+    }
+
+    @include lg {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .layout-outer {
+            max-width: 397.5px;
+        }
+
+        .dark-info-box {
+            max-width: 397.5px;
+        }
+    }
+}
+
+body {
+}

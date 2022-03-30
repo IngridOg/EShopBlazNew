@@ -1,0 +1,145 @@
+﻿@use '../PartialSCSSFiles/helpers' as *;
+
+.footer1 {
+    background-color: $eshop-midnightblue;
+    display: grid;
+    grid-template-areas: "divider" "info";
+    margin-top: 6rem;
+
+    .dividing-line {
+        grid-area: divider;
+        background-color: $eshop-theme-color;
+        height: 3px;
+    }
+
+    .info-columns {
+        grid-area: info;
+        display: grid;
+        grid-template-areas: "first-column" "second-column" "third-column" "fourth-column";
+        margin-top: 2rem;
+    }
+
+    .first-column {
+        grid-area: first-column;
+        padding-right: 1rem;
+
+        .small-text {
+            font-size: 14px;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .second-column {
+        grid-area: second-column;
+        padding-right: 1rem;
+    }
+
+    .third-column {
+        grid-area: third-column;
+        padding-right: 1rem;
+    }
+
+    .fourth-column {
+        grid-area: fourth-column;
+    }
+
+    h6 {
+        font-size: 18px;
+        margin-top: 2.8rem;
+        margin-bottom: 2.2rem;
+    }
+
+    p {
+        color: white;
+    }
+
+    a, a:link {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $eshop-theme-color;
+        text-decoration: underline;
+    }
+
+    @include sm {
+        .info-columns {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "first-column second-column third-column fourth-column";
+        }
+
+        .first-column {
+            grid-area: first-column;
+        }
+
+        .second-column {
+            grid-area: second-column;
+        }
+
+        .third-column {
+            grid-area: third-column;
+        }
+
+        .fourth-column {
+            grid-area: fourth-column;
+        }
+    }
+}
+
+.footer2 {
+    background-color: $black-color;
+    height: 6rem;
+
+    .copyright-area {
+        flex-direction: column;
+        display: flex;
+        align-items: start;
+
+        .credit-cards {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 10px;
+
+            img {
+                width: calc((100% - 41px) / 5)
+            }
+        }
+
+        .copyright-text1 {
+            display: none;
+        }
+
+        .copyright-text2 {
+            color: white;
+            margin-top: 13px;
+            display: flex;
+        }
+    }
+
+    @include sm {
+        height: 4.5rem;
+
+        .copyright-area {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .credit-cards {
+                display: flex;
+            }
+
+            .copyright-text1 {
+                color: white;
+                margin-top: 1.6rem;
+                display: flex;
+            }
+
+            .copyright-text2 {
+                display: none;
+            }
+        }
+    }
+}

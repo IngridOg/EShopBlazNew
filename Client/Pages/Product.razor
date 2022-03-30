@@ -1,0 +1,235 @@
+﻿@page "/product/{id:int}"
+
+@inject IProductService ProdService
+@inject ICustomerService CustService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Kenkata</PageTitle>
+
+
+@if (product == null)
+{
+    <!-- Loading. Show spinner. -->
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    <!-- Show banner -->
+
+    <div class="container-fluid banner">
+        <div class="container banner-content">
+
+            <div class="path">
+                <p>Home</p>
+            </div>
+            <div>
+                <p>&nbsp;/&nbsp;</p>
+            </div>
+            <div class="path">
+                <p>Shop</p>
+            </div>
+            <div>
+                <p>&nbsp;/&nbsp;</p>
+            </div>
+            <div class="path">
+                <p>@product.Category.GetString()</p>
+            </div>
+            <div class="d-none d-md-block">
+                <p>&nbsp;/&nbsp;</p>
+            </div>
+            <div class="d-none d-md-block">
+                <p>@product.Name</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Show product. -->
+    <!-- In this simplified version of the application, always assume that the first productVariant is the choosen one.  -->
+
+    @if (choosenProductVariant != null)
+    {
+
+        <div class="container product-area">
+            <div class="first-column">
+                <div class="picture">
+                    <img src="images/products/@choosenProductVariant.ImageUrl" style="height:100%; width:100%;" />
+                </div>
+            </div>
+            <div class="second-column">
+                <div class="theme">
+                    <h4>@product.Name</h4>
+                </div>
+                <div class="product-description">
+                    <p>@product.Description</p>
+                </div>
+                <div class="price-area">
+                    <div class="theme">
+                        <h4>$@choosenProductVariant.Price</h4>
+                    </div>
+                    <div class="list-price">
+                        @if (@choosenProductVariant.Price != @choosenProductVariant.ListPrice)
+                        {
+                            <p><del>$@choosenProductVariant.ListPrice</del></p>
+                        }
+                    </div>
+                    <EditForm Model="choosenProductVariant">
+                        <InputSelect Id="ColorSelector" class="color-selector" @bind-Value="@choosenProductVariant.Color" @oninput="ColorChanged">
+                            @foreach (var value in colorList)
+                            {
+                                <option>@value</option>
+                            }
+                        </InputSelect>
+                        <InputSelect Id="SizeSelector" @bind-Value="@choosenProductVariant.Size" @oninput="SizeChanged">
+                            @foreach (var value in sizeList)
+                            {
+                                <option>@value</option>
+                            }
+                        </InputSelect>
+                    </EditForm>
+                </div>
+
+                <br>
+
+                <div class="button-row mb-5">
+                    <div class="btn-number-of-items-group" role="group" aria-label="Increase or decrease number of items to buy.">
+                        <button type="button" @onclick="(() => ChangeNumberOfItems(Change.Decrease))" class="rounded-start border-end-0 btn-decrease">
+                            <p>-</p>
+                        </button>
+                        <button type="button" class="btn-number-of-items"><p>@numberOfItems</p></button>
+                        <button type="button" @onclick="(() => ChangeNumberOfItems(Change.Increase))" class="rounded-end border-start-0 btn-increase">
+                            <p>+</p>
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" @onclick="AddToCart" class="btn btn-add-to-cart">
+                            <div class="d-flex align-items-center ml-5">
+                                <i class="bi-cart"></i><span class="ms-1">Add to cart</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    }
+
+}
+
+@code {
+    [CascadingParameter]
+    protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
+
+    [Parameter]
+    public int Id { get; set; } = 0;
+
+    private CustomerModel? customer;
+    private DetailModel? detail;
+    private int numberOfItems = 1;
+    private ProductModel? product;
+    private ProductVariantModel? choosenProductVariant;
+    private ShoppingCartModel? shoppingCart;
+
+    private List<ProductColor> colorList = new List<ProductColor>();
+    private List<ProductSize> sizeList = new List<ProductSize>();
+
+    public enum Change
+    {
+        Decrease = 0,
+        Increase = 1
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProdService.GetProduct(Id);
+        choosenProductVariant = product.ProductVariants.ToList()[0];
+
+        foreach (var productVariant in product.ProductVariants)
+        {
+            if (productVariant.Size == choosenProductVariant.Size)
+                colorList.Add(productVariant.Color);
+            if (productVariant.Color == choosenProductVariant.Color)
+                sizeList.Add(productVariant.Size);
+        }
+    }
+
+    void ChangeNumberOfItems(Change Change)
+    {
+        if (Change == Change.Decrease && numberOfItems > 0)
+        {
+            numberOfItems--;
+        }
+        else if (Change == Change.Increase && numberOfItems < 99)
+        {
+            numberOfItems++;
+        }
+    }
+
+    void ColorChanged()
+    {
+        sizeList = new List<ProductSize>();
+
+        foreach (var productVariant in product.ProductVariants)
+        {
+            if (productVariant.Color == choosenProductVariant.Color)
+                sizeList.Add(productVariant.Size);
+        }
+    }
+
+    void SizeChanged()
+    {
+        colorList = new List<ProductColor>();
+
+        foreach (var productVariant in product.ProductVariants)
+        {           
+            if (productVariant.Size == choosenProductVariant.Size)
+                colorList.Add(productVariant.Color);
+        }        
+    }
+
+    async Task AddToCart()
+    {
+        if (User != null && User.IsAuthenticated() && User.CustomerId != null)
+        {
+            customer = await CustService.GetCustomer((int)User.CustomerId);
+            if (customer != null)
+            {
+                // In this simplified version assume there is only one shopping cart per customer.
+                shoppingCart = customer.ShoppingCartModels.ToList()[0];
+            }
+            else
+            {
+                // Use a shopping cart that is not yet connected to any customer.
+                shoppingCart = Globals.ShoppingCart;                
+            }
+        }
+        else
+        {
+            // Use a shopping cart that is not yet connected to any customer.
+            shoppingCart = Globals.ShoppingCart;
+        }
+
+        if (shoppingCart != null)
+        {
+            // Add product to shopping cart.
+
+            detail = new DetailModel();
+            detail.RowNr = shoppingCart.Details.Count + 1;
+            detail.Quantity = numberOfItems;
+            detail.SubTotal = detail.Quantity * (int)choosenProductVariant.Price;
+            detail.ProductVariant = choosenProductVariant;
+            detail.ProductVariantId = choosenProductVariant.Id;
+            shoppingCart.Details.Add(detail);
+
+            // Update cart total in header.
+
+            UpdateShoppingCart.InvokeAsync(shoppingCart);
+        }
+    }
+}

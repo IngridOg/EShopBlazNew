@@ -1,0 +1,168 @@
+﻿@use '../PartialSCSSFiles/helpers' as *;
+
+.category-grid-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(300px, auto);
+    gap: 10px;
+    display: grid;
+}
+
+.category-grid-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+        }
+    }
+}
+
+.category-grid-item:hover .image img {
+    transform: scale(1.1);
+}
+
+.badge {
+    font-family: $default-font;
+    font-size: 16px;
+    font-weight: $medium;
+    background-color: $eshop-midnightblue;
+    color: $eshop-theme-color;
+    height: 3rem;
+    position: absolute;
+    padding-top: 1rem;
+    text-align: left;
+    margin-top: -3rem;
+}
+
+
+.men {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.women {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.kids {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.shoes {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.hats {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.sunglasses {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.watches {
+    grid-column: 1;
+    grid-row: 7;
+}
+
+@include md {
+    .category-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .women {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    .men {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+
+    .shoes {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    .kids {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+
+    .hats {
+        grid-column: 1 / 2;
+        grid-row: 3;
+    }
+
+    .watches {
+        grid-column: 2 / 3;
+        grid-row: 3;
+    }
+
+    .sunglasses {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+}
+
+@include lg {
+    .category-grid-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .men {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .women {
+        grid-column: 2 / 4;
+        grid-row: 1;
+    }
+
+    .kids {
+        grid-column: 4 / 6;
+        grid-row: 1 / 3;
+    }
+
+    .shoes {
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .hats {
+        grid-column: 3 / 4;
+        grid-row: 2;
+    }
+
+    .sunglasses {
+        grid-column: 3 / 5;
+        grid-row: 3;
+    }
+
+    .watches {
+        grid-column: 5;
+        grid-row: 3;
+    }
+}
+
+
+body {
+}

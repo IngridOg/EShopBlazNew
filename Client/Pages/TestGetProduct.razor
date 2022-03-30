@@ -1,0 +1,44 @@
+﻿@page "/testGetProduct"
+
+<h3>TestGetProduct</h3>
+
+@if (product == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Prouct Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                @foreach (ProductVariantModel v in product.ProductVariants)
+                {
+                    <td>@v.ListPrice</td>
+                    <td>@v.Price</td>
+                }
+            </tr>
+
+        </tbody>
+    </table>
+}
+
+@code {
+    private ProductModel product;
+
+    [Inject]
+    public IProductService ProdService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProdService.GetProduct(5);
+    }
+}

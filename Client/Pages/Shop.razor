@@ -1,0 +1,128 @@
+﻿@page "/shop/{Category:int}"
+@inject IProductService ProdService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Kenkata</PageTitle>
+
+    <div class="container-fluid banner">
+      <div class="container">
+
+        <div class="first-line">
+          <h3>New Customer</h3>
+        </div>
+        <div class="second-line">
+          <div class="first-text-part">
+            <h3>Can Get</h3>
+          </div>
+          <div class="theme second-text-part">
+            <h3>&nbsp;30% Off</h3>
+            <br>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="btn btn-learn-more">LEARN MORE</button>
+        </div>
+
+      </div>
+    </div>
+
+    @if (products == null)
+    {
+        <!-- Loading. Show spinner. -->
+
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else
+    {
+
+        <!-- Show products -->
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+                @foreach (var product in products)
+                {
+                    @if (@product.ProductVariants.Count > 0)
+                    {
+                        <div class="col">
+                            <div class="card text-white shadow h-100">
+                                @if (User.IsAuthenticated())
+                                {
+                             
+                                }
+                                else
+                                {
+                                    <a @onclick="(() => ShowProduct(product.Id))">
+
+                                        <div class="image">
+                                            <img src="images/products/@product.ProductVariants.ToList()[0].ImageUrl" class="card-img-top img-fluid" alt="@product.Name">
+                                        </div>
+
+                                    </a>
+                                }
+
+                                <button class="btn-card-title">@product.Name</button>
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+
+    }
+ 
+
+
+
+@code {
+    [CascadingParameter]
+    protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
+
+    [Parameter]
+    public int Category { get; set;  }
+
+    private List<ProductModel> products;
+    private List<ProductModel> newProducts;
+
+    private IEnumerable categories = Enum.GetValues(typeof(ProductCategory));
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        if ((ProductCategory)Category == ProductCategory.NoCategory)
+        {
+            products = new();
+            foreach (var cat in categories)
+            {
+                //  Show clothes from all product categories.
+                if (((ProductCategory)cat != ProductCategory.NoCategory) && ((ProductCategory)cat < ProductCategory.Kids))
+                {
+                    newProducts = (List<ProductModel>) await ProdService.GetProducts((int)cat);
+                    foreach (ProductModel prod in newProducts)
+                    {
+                        products.Add(prod);
+                    }
+                }              
+            }
+        }
+        else
+        {
+            products = (List<ProductModel>) await ProdService.GetProducts(Category);
+        }
+    }
+
+    void ShowProduct(int id)
+    {
+        NavigationManager.NavigateTo($"product/{id}");
+    }
+
+    void ShowProduct(int id, int customerId)
+    {
+        NavigationManager.NavigateTo($"product/{id}/{customerId}");
+    }
+}

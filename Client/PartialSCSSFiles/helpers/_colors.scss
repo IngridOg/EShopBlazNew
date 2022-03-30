@@ -1,0 +1,37 @@
+
+$white: #ffffff;
+$light-grey-bg-color: #F6F6F6;
+$product-bg-color: #EEEEEE;
+$line-bullet-color: #E3E3E3;
+$dark-grey: #AAAAAA;
+$dark: #333333;
+$black-color: rgb(0,0,0);
+
+
+$hot: #FE4545;
+$sale: #64CB83;
+
+$eshop-theme-color: #20d3c2;
+$eshop-theme-contrast: #19aa9c;
+$eshop-midnightblue: #0E153D;
+$eshop-midnightblue-contrast: #1c2b7d;
+
+
+$primary: $eshop-theme-color;
+$secondary: $eshop-midnightblue;
+
+$primary-color: rgba(32,211,193,0.84);
+$secondary-color: rgb(14,21,61);
+$tertiary-color: rgb(255,255,255);
+
+$eshop-theme-opaque8: rgba(32,211,194,0.08);
+$eshop-bg-midnightblue-opaque85: rgba(14, 21, 61, 0.85);
+$eshop-bg-midnightblue-opaque65: rgba(14, 21, 61, 0.65);
+
+
+
+$colors: (
+    "primary": $primary-color,
+    "secondary": $secondary-color,
+    "tertiary": $tertiary-color,
+);

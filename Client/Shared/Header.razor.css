@@ -1,0 +1,222 @@
+/*header {
+    margin-bottom: 0px;
+}*/
+.dropdown-menu {
+  background-color: #19aa9c;
+}
+.dropdown-menu a:hover, .dropdown-menu .active {
+  color: #0E153D;
+}
+.dropdown-menu a:focus {
+  background-color: #AAAAAA;
+}
+.dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+
+/* Top row */
+#top-row {
+  background-color: #20d3c2;
+  height: 3rem;
+  padding: 0;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+#top-row .navbar {
+  padding: 0;
+}
+#top-row a {
+  font-size: 18px;
+  color: white;
+  padding: 0;
+  margin-top: 4px;
+}
+#top-row .flex-container {
+  display: flex;
+  flex-direction: row;
+}
+#top-row .first-section {
+  flex: 60%;
+}
+#top-row .first-section a {
+  margin-right: 1rem;
+}
+#top-row .second-section {
+  display: none;
+}
+#top-row .menu-mobile {
+  flex: 40%;
+}
+#top-row .menu-mobile .nav-item {
+  background-color: #19aa9c;
+  padding: 0rem 1rem 1rem 1rem;
+  z-index: 5;
+}
+#top-row .menu-mobile .dropdown-menu {
+  background-color: #20d3c2;
+}
+#top-row .menu-mobile .dropdown-menu .dropdown-item {
+  padding: 0rem 0rem 0rem 0.5rem;
+}
+#top-row .nav-item a:hover, #top-row .nav-item .active {
+  color: #0E153D;
+}
+@media (min-width: 992px) {
+  #top-row {
+    height: 2rem;
+    padding-top: 0;
+  }
+  #top-row .second-section {
+    flex: 40%;
+    display: flex;
+  }
+  #top-row .second-section a {
+    margin-left: 2rem;
+  }
+  #top-row .menu-mobile {
+    display: none;
+  }
+}
+
+/* Top middle row */
+#top-middle-row {
+  margin-bottom: 0.5rem;
+}
+#top-middle-row .btn-group-search-field {
+  display: none;
+}
+#top-middle-row .btn-favourites {
+  display: block;
+}
+#top-middle-row .btn-group-misc {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+#top-middle-row .misc-buttons {
+  display: flex;
+  flex-direction: column;
+}
+#top-middle-row .misc-buttons .btn-my-account {
+  justify-content: end;
+  padding: 0;
+}
+#top-middle-row .misc-buttons .btn-favourites {
+  display: none;
+}
+#top-middle-row .misc-buttons .btn-shopping-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 0;
+}
+@media (min-width: 576px) {
+  #top-middle-row .btn-favourites {
+    display: none;
+  }
+  #top-middle-row .misc-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+  #top-middle-row .misc-buttons .btn-my-account {
+    margin-right: 0.5rem;
+  }
+  #top-middle-row .misc-buttons .btn-favourites {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  #top-middle-row .btn-group-search-field {
+    display: flex;
+  }
+}
+
+/* Main menu row */
+.menu-desktop {
+  display: none;
+}
+
+#top-extra-row1-on-mobile .btn-special-offer {
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+@media (min-width: 576px) {
+  #top-extra-row1-on-mobile .btn-special-offer {
+    display: none;
+  }
+}
+
+#main-menu .nav-item a {
+  color: #0E153D;
+  font-size: 18px;
+  margin-right: 1rem;
+}
+#main-menu .no-dropdown .nav-item a:after, #main-menu .no-dropdown .nav-item .active:after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid transparent;
+}
+#main-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+#main-menu .dropdown:hover .dropdown-menu a {
+  color: white;
+}
+#main-menu .dropdown:hover .dropdown-menu a:hover, #main-menu .dropdown:hover .dropdown-menu .active {
+  color: #0E153D;
+}
+#main-menu .no-dropdown .nav-item a:hover:after, #main-menu .no-dropdown .nav-item .active:after {
+  border-color: #20d3c2;
+}
+#main-menu .btn-special-offer {
+  display: none;
+}
+@media (min-width: 576px) {
+  #main-menu .btn-special-offer {
+    display: block;
+  }
+}
+
+/* Another extra row for small screens. */
+#top-extra-row2-on-mobile .btn-group-search-field {
+  display: flex;
+}
+@media (min-width: 992px) {
+  #top-extra-row2-on-mobile .btn-group-search-field {
+    display: none;
+  }
+}
+
+.bi-list {
+  font-size: 2rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-search-product {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  height: 45px;
+  min-width: 304px;
+  color: #AAAAAA;
+  border-radius: 23px 0 0 23px;
+}
+
+@media (min-width: 992px) {
+  /*    header {
+      margin-bottom: 0;
+  }*/
+  .nav-item {
+    background-color: transparent;
+  }
+
+  .menu-desktop {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Header.razor.css.map */

@@ -1,0 +1,12 @@
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\bin\Debug\net6.0\EShopBlazNew.Shared.deps.json
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\bin\Debug\net6.0\EShopBlazNew.Shared.dll
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\bin\Debug\net6.0\EShopBlazNew.Shared.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.csproj.AssemblyReference.cache
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.AssemblyInfoInputs.cache
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.AssemblyInfo.cs
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.dll
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\refint\EShopBlazNew.Shared.dll
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\EShopBlazNew.Shared.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\GitClone3\EShopBlazNew\Shared\obj\Debug\net6.0\ref\EShopBlazNew.Shared.dll

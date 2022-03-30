@@ -1,0 +1,42 @@
+﻿@page "/testGetCustomers"
+
+<h3>Customers</h3>
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in customers)
+            {
+                <tr>
+                    <td>@c.FirstName</td>
+                    <td>@c.LastName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<CustomerModel> customers;
+
+    [Inject]
+    public ICustomerService CustService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await CustService.GetCustomers();
+    }
+
+}
+

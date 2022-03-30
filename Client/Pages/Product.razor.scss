@@ -1,0 +1,80 @@
+﻿@use '../PartialSCSSFiles/helpers' as *;
+
+.banner {
+    background-color: $eshop-bg-midnightblue-opaque85;
+    color: white;
+    height: 140px;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+
+    .banner-content {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        margin-top: 2.5rem;
+
+        .path {
+            color: $eshop-theme-color;
+        }
+    }
+}
+
+.product-area {
+    display: grid;
+    grid-template-areas: "picture" "info";
+
+    .first-column {
+        grid-area: picture;
+    }
+
+    .second-column {
+        grid-area: info;
+
+        .price-area {
+            display: flex;
+            align-items: baseline;
+
+            .list-price {
+                color: $dark-grey;
+                margin-left: 2rem;
+            }
+
+            .color-selector {
+                color: $dark-grey;
+                margin-left: 2rem;
+            }
+        }
+
+        .button-row {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@include md {
+    .banner {
+        margin-bottom: 5rem;
+    }
+
+    .product-area {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+        grid-template-areas: "picture info"; 
+        margin-bottom: -1rem;
+
+        .first-column {
+            grid-area: picture;
+        }
+
+        .second-column {
+            grid-area: info;
+        }
+    }
+}
+
+body {
+
+
+
+}

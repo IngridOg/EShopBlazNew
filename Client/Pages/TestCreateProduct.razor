@@ -1,0 +1,41 @@
+﻿@page "/testCreateProduct"
+<h3>TestCreateProduct</h3>
+
+@code {
+    private CreateProductModel product;
+    private CreateProductVariantModel productVariant;
+    private ProductModel newProduct;
+
+    [Inject]
+    public IProductService ProdService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        product=new();
+        product.Name="Stetson Walters";
+        product.Description = "";
+        product.Material = "100% Wool";
+        product.Care = "";
+        product.Brand = "Kangol";
+        product.Supplier = "";
+        product.Category = ProductCategory.Hats;
+        product.SubCategory = (byte)HatsSubCategory.Fedora; 
+        product.Season = SellingSeason.Winter;
+
+	newProduct = await ProdService.CreateProduct(product);
+
+	productVariant=new();
+	productVariant.ProductId = newProduct.Id;
+        productVariant.ListPrice = 162;
+        productVariant.Price = 162;
+        productVariant.ImageUrl="stetson-western-woolfelt-brown.jpg";
+        productVariant.Size = ProductSize.M;
+        productVariant.Color = ProductColor.Brown;
+        productVariant.NumberInStock = 27;
+        productVariant.OnSale = false;
+
+        await ProdService.CreateProductVariant(productVariant);
+
+
+    }
+}

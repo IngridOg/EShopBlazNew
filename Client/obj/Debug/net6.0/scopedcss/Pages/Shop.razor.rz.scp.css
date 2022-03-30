@@ -1,0 +1,79 @@
+.banner[b-bdzfad2hph] {
+  font-size: 24px;
+  font-weight: 500;
+  background-color: rgba(14, 21, 61, 0.85);
+  color: white;
+  height: 400px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 5rem;
+}
+.banner .second-line[b-bdzfad2hph] {
+  display: flex;
+  justify-content: center;
+}
+
+.content-area[b-bdzfad2hph] {
+  /*    .badge {
+          font-family: $default-font;
+          font-size: 16px;
+          font-weight: $medium;
+          background-color: $eshop-midnightblue;
+          color: $eshop-theme-color;
+          height: 3rem;
+          position: absolute;
+          text-align: left;
+      }*/
+}
+.content-area a[b-bdzfad2hph], .content-area a:link[b-bdzfad2hph] {
+  color: white;
+  text-decoration: none;
+}
+.content-area .card[b-bdzfad2hph] {
+  width: 255px;
+  height: 292px;
+  color: white;
+  background: rgba(14, 21, 61, 0.85);
+  border-radius: 6px;
+}
+.content-area .card .image[b-bdzfad2hph] {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content-area .card .image img[b-bdzfad2hph] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.content-area .card .std-price[b-bdzfad2hph] {
+  font-size: 14px;
+}
+.content-area .card .actual-price[b-bdzfad2hph] {
+  font-size: 18px;
+  font-weight: 500;
+  color: #20d3c2;
+}
+.content-area .card:hover .image img[b-bdzfad2hph] {
+  transform: scale(1.1);
+}
+.content-area img[b-bdzfad2hph] {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  .banner[b-bdzfad2hph] {
+    text-align: left;
+  }
+  .banner .second-line[b-bdzfad2hph] {
+    justify-content: left;
+  }
+}
+
+/*# sourceMappingURL=Shop.razor.css.map */

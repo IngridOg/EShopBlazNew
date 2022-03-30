@@ -1,0 +1,64 @@
+.banner {
+  background-color: rgba(14, 21, 61, 0.85);
+  color: white;
+  height: 140px;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+}
+.banner .banner-content {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.banner .banner-content .path {
+  color: #20d3c2;
+}
+
+.product-area {
+  display: grid;
+  grid-template-areas: "picture" "info";
+}
+.product-area .first-column {
+  grid-area: picture;
+}
+.product-area .second-column {
+  grid-area: info;
+}
+.product-area .second-column .price-area {
+  display: flex;
+  align-items: baseline;
+}
+.product-area .second-column .price-area .list-price {
+  color: #AAAAAA;
+  margin-left: 2rem;
+}
+.product-area .second-column .price-area .color-selector {
+  color: #AAAAAA;
+  margin-left: 2rem;
+}
+.product-area .second-column .button-row {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    margin-bottom: 5rem;
+  }
+
+  .product-area {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    grid-template-areas: "picture info";
+    margin-bottom: -1rem;
+  }
+  .product-area .first-column {
+    grid-area: picture;
+  }
+  .product-area .second-column {
+    grid-area: info;
+  }
+}
+
+/*# sourceMappingURL=Product.razor.css.map */

@@ -1,0 +1,81 @@
+﻿@use '../PartialSCSSFiles/helpers' as *;
+
+.home-area {
+    background-color: $product-bg-color;
+    min-height: 600px;
+
+    .main-part {
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-areas: "second" "first";
+
+        .first-column {
+            grid-area: first;
+            height: 600px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                color: $eshop-theme-color;
+            }
+
+            h2 {
+                color: $eshop-midnightblue;
+            }
+
+            p {
+                text-align: center;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
+        /*  Crop and center the image. */
+
+        .second-column {
+            grid-area: second;
+            position: absolute;
+            height: 600px;
+            width: 600px;
+            overflow: hidden;
+
+            img {
+                position: relative;
+                left: 75%;
+                margin-left: -100%;
+            }
+        }
+    }
+
+    @include sm {
+
+        .main-part {
+            grid-template-columns: 350px 1fr;
+            grid-template-areas: "first second";
+
+            .first-column {
+                grid-area: first;
+                height: 600px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+
+                p {
+                    text-align: start;
+                }
+            }
+
+            .second-column {
+                grid-area: second;
+            }
+        }
+    }
+}
+
+body {
+}
