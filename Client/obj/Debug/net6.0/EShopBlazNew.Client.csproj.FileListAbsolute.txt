@@ -1464,12 +1464,6 @@ C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\E
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\EShopBlazNew.Client.AssemblyInfo.cs
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\EShopBlazNew.Client.csproj.CoreCompileInputs.cache
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\EShopBlazNew.Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\s8uEnOfl.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\s5m3yDEB.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\TFALPfgs.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\W0CSd+hH.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\CIO5+MXD.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\wwM6sVnc.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\f7Eo2NKr.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\wXQQHxBV.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\tn9IloZA.gz
@@ -1482,11 +1476,8 @@ C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\b
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\fn3py5yC.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\4b29PLP7.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\WSPmcZIZ.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\sTfBrTyP.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\NFFAiinH.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\3zT4S2Yc.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\A+8g2Mut.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\n+W4JI5X.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\mERlAGtb.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\VfohnS2V.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\CJ5GcVs+.gz
@@ -1667,7 +1658,6 @@ C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\b
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\26q8QUCo.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\XRB549A8.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\3lK+Gd+b.gz
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\DZF+Bpme.gz
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\blazor.boot.json
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\staticwebassets.development.json
@@ -1692,3 +1682,13 @@ C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\E
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\refint\EShopBlazNew.Client.dll
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\EShopBlazNew.Client.pdb
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\ref\EShopBlazNew.Client.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\8y+hV9Wf.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\MXAwZljs.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\3w9R2+Ub.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\PpfqWriU.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\+FiW8JRN.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\MheFJX4b.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\OI4ko+KS.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\CKZMzdWZ.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\jKmjtrhM.gz
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\build-gz\NLm+VJHF.gz

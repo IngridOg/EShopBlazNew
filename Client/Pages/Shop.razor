@@ -1,6 +1,5 @@
 ﻿@page "/shop/{Category:int}"
 @inject IProductService ProdService
-@inject NavigationManager NavigationManager
 
 <PageTitle>Kenkata</PageTitle>
 
@@ -56,7 +55,7 @@
                                 }
                                 else
                                 {
-                                    <a @onclick="(() => ShowProduct(product.Id))">
+                                    <a href="@($"product/{product.Id}")">
 
                                         <div class="image">
                                             <img src="images/products/@product.ProductVariants.ToList()[0].ImageUrl" class="card-img-top img-fluid" alt="@product.Name">
@@ -114,15 +113,5 @@
         {
             products = (List<ProductModel>) await ProdService.GetProducts(Category);
         }
-    }
-
-    void ShowProduct(int id)
-    {
-        NavigationManager.NavigateTo($"product/{id}");
-    }
-
-    void ShowProduct(int id, int customerId)
-    {
-        NavigationManager.NavigateTo($"product/{id}/{customerId}");
     }
 }

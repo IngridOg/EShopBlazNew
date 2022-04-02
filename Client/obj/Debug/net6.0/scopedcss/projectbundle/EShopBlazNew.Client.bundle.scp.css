@@ -102,8 +102,12 @@
   margin-left: 2rem;
 }
 .product-area .second-column .price-area .color-selector[b-budddxubjh] {
-  color: #AAAAAA;
+  color: #0E153D;
   margin-left: 2rem;
+}
+.product-area .second-column .price-area .size-selector[b-budddxubjh] {
+  color: #0E153D;
+  margin-left: 1rem;
 }
 .product-area .second-column .button-row[b-budddxubjh] {
   display: flex;

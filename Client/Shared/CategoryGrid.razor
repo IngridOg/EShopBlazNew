@@ -1,11 +1,10 @@
-﻿@inject NavigationManager NavigationManager
-
+﻿
 <div class="container category-grid-container">
 
     <div class="category-item-container men">
         <div class="category-grid-item">
             
-            <a @onclick="(() => ShowCategory(ProductCategory.Men))">
+            <a href="@($"shop/{(int)ProductCategory.Men}")">
                 <div class="image">
                     <img src="images/products/men2.jpg" alt="Men's fashion">
                 </div>
@@ -16,7 +15,7 @@
 
     <div class="category-item-container women">
         <div class="category-grid-item">
-            <a @onclick="(() => ShowCategory(ProductCategory.Women))">
+            <a href="@($"shop/{(int)ProductCategory.Women}")">
                 <div class="image">
                     <img src="images/products/women.jpg" alt="Women's fashion">
                 </div>
@@ -27,7 +26,7 @@
 
     <div class="category-item-container kids">
         <div class="category-grid-item">
-            <a @onclick="(() => ShowCategory(ProductCategory.Kids))">
+            <a href="@($"shop/{(int)ProductCategory.Kids}")">
                 <div class="image">
                     <img src="images/products/kids.jpg" alt="Kid's fashion">
                 </div>
@@ -38,7 +37,7 @@
 
     <div class="category-item-container shoes">
         <div class="category-grid-item">
-            <a @onclick="(() => ShowCategory(ProductCategory.Shoes))">
+            <a href="@($"shop/{(int)ProductCategory.Shoes}")">
                 <div class="image">
                     <img src="images/products/shoes.jpg" alt="Shoes">
                 </div>
@@ -49,7 +48,7 @@
 
     <div class="category-item-container hats">
         <div class="category-grid-item">
-            <a @onclick="(() => ShowCategory(ProductCategory.Hats))">
+            <a href="@($"shop/{(int)ProductCategory.Hats}")">
                 <div class="image">
                     <img src="images/products/hatc.jpg" alt="Hats">
                 </div>
@@ -60,7 +59,7 @@
 
     <div class="category-item-container sunglasses">
         <div class="category-grid-item">
-            <a @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">
+            <a href="@($"shop/{(int)ProductCategory.Sunglasses}")">
                 <div class="image">
                     <img src="images/products/sunglasses_wide.jpg" alt="Sunglasses">
                 </div>
@@ -71,7 +70,7 @@
 
     <div class="category-item-container watches">
         <div class="category-grid-item">
-            <a @onclick="(() => ShowCategory(ProductCategory.Watches))">
+            <a href="@($"shop/{(int)ProductCategory.Watches}")">
                 <div class="image">
                     <img src="images/products/watches.webp" alt="Watches">
                 </div>
@@ -85,8 +84,4 @@
 
 @code {
 
-    void ShowCategory(ProductCategory category)
-    {
-        NavigationManager.NavigateTo($"shop/{(int)category}");
-    }
 }

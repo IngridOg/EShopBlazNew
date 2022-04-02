@@ -121,13 +121,13 @@
                   Categories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Women}")">@ProductCategory.Women.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Men}")">@ProductCategory.Men.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Kids}")">@ProductCategory.Kids.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Shoes}")">@ProductCategory.Shoes.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Hats}")">@ProductCategory.Hats.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Sunglasses}")">@ProductCategory.Sunglasses.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Watches}")">@ProductCategory.Watches.GetString()</a></li>
                 </ul>
               </li>
 
@@ -172,13 +172,13 @@
               Categories
             </button>
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Women}")">@ProductCategory.Women.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Men}")">@ProductCategory.Men.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Kids}")">@ProductCategory.Kids.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Shoes}")">@ProductCategory.Shoes.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Hats}")">@ProductCategory.Hats.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Sunglasses}")">@ProductCategory.Sunglasses.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Watches}")">@ProductCategory.Watches.GetString()</a></li>
             </ul>
           </div>
           <button type="button" class="btn btn-search"><i class="bi-search"></i><span class="ms-1"></span></button>
@@ -194,9 +194,7 @@
             <button type="button" class="btn btn-shopping-cart" @onclick="ShowShoppingCart"><i class="bi-bag"></i><span
                 class="ms-2"></span>$@shoppingCartTotal</button>
           </div>
-
         </div>
-
       </div>
 
     </section>
@@ -228,13 +226,13 @@
               <span class="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
-                <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Women}")">@ProductCategory.Women.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Men}")">@ProductCategory.Men.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Kids}")">@ProductCategory.Kids.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Shoes}")">@ProductCategory.Shoes.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Hats}")">@ProductCategory.Hats.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Sunglasses}")">@ProductCategory.Sunglasses.GetString()</a></li>
+                <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Watches}")">@ProductCategory.Watches.GetString()</a></li>
             </ul>
           </div>
 
@@ -288,13 +286,13 @@
                     Categories
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Women))">@ProductCategory.Women.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Men))">@ProductCategory.Men.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Kids))">@ProductCategory.Kids.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Shoes))">@ProductCategory.Shoes.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Hats))">@ProductCategory.Hats.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Sunglasses))">@ProductCategory.Sunglasses.GetString()</a></li>
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.Watches))">@ProductCategory.Watches.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Women}")">@ProductCategory.Women.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Men}")">@ProductCategory.Men.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Kids}")">@ProductCategory.Kids.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Shoes}")">@ProductCategory.Shoes.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Hats}")">@ProductCategory.Hats.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Sunglasses}")">@ProductCategory.Sunglasses.GetString()</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Watches}")">@ProductCategory.Watches.GetString()</a></li>
                   </ul>
                 </li>
 
@@ -304,8 +302,8 @@
                     Pages
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
-                    <li><a class="dropdown-item" @onclick="(() => ShowCategory(ProductCategory.NoCategory))">Shop</a></li>
-                    <li><a class="dropdown-item" @onclick="ShowShoppingCart">Shopping Cart</a></li>
+                    <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.NoCategory}")">Shop</a></li>
+                    <li><a class="dropdown-item" href="shoppingcart">Shopping Cart</a></li>
                   </ul>
                 </li>
               </ul>
@@ -336,24 +334,12 @@
 
 
 
-
-
 @code {
     public int shoppingCartTotal = 0;
-
-    void ShowCategory(ProductCategory category)
-    {
-        NavigationManager.NavigateTo($"shop/{(int)category}");
-    }
 
     void ShowShoppingCart()
     {
         NavigationManager.NavigateTo($"shoppingcart");
-    }
-
-    void ShowShoppingCart(int id)
-    {
-        NavigationManager.NavigateTo($"shoppingcart/{(int)id}");
     }
 
     public async Task UpdateShoppingCartTotals(ShoppingCartModel shoppingCart)

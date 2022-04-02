@@ -570,3 +570,4 @@ C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Server\obj\Debug\net6.0\r
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Server\obj\Debug\net6.0\EShopBlazNew.Server.pdb
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Server\obj\Debug\net6.0\EShopBlazNew.Server.genruntimeconfig.cache
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Server\obj\Debug\net6.0\ref\EShopBlazNew.Server.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Server\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

@@ -2,7 +2,6 @@
 
 @inject IProductService ProdService
 @inject ICustomerService CustService
-@inject NavigationManager NavigationManager
 
 <PageTitle>Kenkata</PageTitle>
 
@@ -79,18 +78,27 @@ else
                         }
                     </div>
                     <EditForm Model="choosenProductVariant">
-                        <InputSelect Id="ColorSelector" class="color-selector" @bind-Value="@choosenProductVariant.Color" @oninput="ColorChanged">
-                            @foreach (var value in colorList)
+
+                        <InputSelect class="color-selector" ValueExpression="@(()=>@selectedColor)" Value="@selectedColor" 
+                                ValueChanged="@((ProductColor value) => ColorChanged(value))">
+                            @foreach (var color in colorList)
                             {
-                                <option>@value</option>
+                                <option value="@color">@color</option>
                             }
                         </InputSelect>
-                        <InputSelect Id="SizeSelector" @bind-Value="@choosenProductVariant.Size" @oninput="SizeChanged">
-                            @foreach (var value in sizeList)
+                        <InputSelect class="size-selector" ValueExpression="@(()=>@selectedSize)" Value="@selectedSize" 
+                                ValueChanged="@((ProductSize value) => SizeChanged(value))">
+                            @foreach (var size in sizeList)
                             {
-                                <option>@value</option>
+                                <option value="@size">@size</option>
                             }
                         </InputSelect>
+@*                        <InputSelect Id="size" class="size-selector" @bind-Value="selectedSize" @oninput="SizeChanged">
+                            @foreach (var size in sizeList)
+                            {
+                                <option value="@size">@size</option>
+                            }
+                        </InputSelect>*@
                     </EditForm>
                 </div>
 
@@ -135,10 +143,12 @@ else
     private int numberOfItems = 1;
     private ProductModel? product;
     private ProductVariantModel? choosenProductVariant;
+    private ProductColor selectedColor;
+    private ProductSize selectedSize;
     private ShoppingCartModel? shoppingCart;
 
-    private List<ProductColor> colorList = new List<ProductColor>();
-    private List<ProductSize> sizeList = new List<ProductSize>();
+    public List<ProductColor> colorList = new List<ProductColor>();
+    public List<ProductSize> sizeList = new List<ProductSize>();
 
     public enum Change
     {
@@ -149,6 +159,12 @@ else
     {
         product = await ProdService.GetProduct(Id);
         choosenProductVariant = product.ProductVariants.ToList()[0];
+
+        selectedColor = choosenProductVariant.Color;
+        selectedSize = choosenProductVariant.Size;
+
+        colorList = new List<ProductColor>();
+        sizeList = new List<ProductSize>();
 
         foreach (var productVariant in product.ProductVariants)
         {
@@ -171,28 +187,38 @@ else
         }
     }
 
-    void ColorChanged()
+    void ColorChanged(ProductColor color)
     {
+        selectedColor = color;
         sizeList = new List<ProductSize>();
 
         foreach (var productVariant in product.ProductVariants)
         {
-            if (productVariant.Color == choosenProductVariant.Color)
+            if (productVariant.Color == selectedColor)
+            {
                 sizeList.Add(productVariant.Size);
+                if (productVariant.Size == selectedSize)
+                    choosenProductVariant = productVariant;               
+            }
         }
     }
 
-    void SizeChanged()
+    void SizeChanged(ProductSize size)
     {
+        selectedSize = size;
         colorList = new List<ProductColor>();
 
         foreach (var productVariant in product.ProductVariants)
         {           
-            if (productVariant.Size == choosenProductVariant.Size)
+            if (productVariant.Size == selectedSize)
+            {
                 colorList.Add(productVariant.Color);
+                if (productVariant.Color == selectedColor)
+                    choosenProductVariant = productVariant;               
+            }
         }        
     }
-
+    
     async Task AddToCart()
     {
         if (User != null && User.IsAuthenticated() && User.CustomerId != null)

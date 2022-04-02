@@ -7,12 +7,12 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "Microsoft.AspNetCore.Authorization.dll": "sha256-1MwhDUDzh+JE9dgZxlgMF470nBqLsvGAAgAGfn3n8CI=",
-      "Microsoft.AspNetCore.Components.dll": "sha256-R\/v7gKZiW9HyCdGNOk1GuOzLMyYC4OwMfwPH5+06KG4=",
-      "Microsoft.AspNetCore.Components.Forms.dll": "sha256-Li4PRXFdOgU4EG7r\/STdKG8U2FJlMrY\/bxQhQsGwICw=",
-      "Microsoft.AspNetCore.Components.Web.dll": "sha256-0WGY9O6mBIfsbqEqVkudOQWESYqKRhaTioQk3Twqvdw=",
-      "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-8Zk+1aqFk60UAGDm7pdqwLays3Lr2ICp6uJ3Z8MPCCE=",
-      "Microsoft.AspNetCore.Metadata.dll": "sha256-gnc+PVbmWP6vWXYgIbnhIyEll2ok6iKRa9wueeJF5lU=",
+      "Microsoft.AspNetCore.Authorization.dll": "sha256-Ha5fdCPDxEzQSfpAqMldZhxAZGSoQpwYh8Onk\/zR2Bc=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-4niu36Ua\/a0Tb++kk0BPETzMKL79X97WKKAHwXyA54M=",
+      "Microsoft.AspNetCore.Components.Forms.dll": "sha256-1PZMkDLrAl6RLFr\/EMxNeUbUlRv3yJgimVzqANb9PMU=",
+      "Microsoft.AspNetCore.Components.Web.dll": "sha256-hkBwjTfIX83yKHGloNqJk4dwTFk3VWKGdA5OtOyERqM=",
+      "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-XwPAlBNXw8oEUY4SlFxHYJVJEQWyCNt9P2vWVP\/DuiU=",
+      "Microsoft.AspNetCore.Metadata.dll": "sha256-Jq8wtjEX7PqZ9ANb4u0dR0yU0Oz8dC1tYaXemaoDdoQ=",
       "Microsoft.Extensions.Configuration.dll": "sha256-c8yYhfrOBLEnOBglLTu9peXSbJDwFpuT4UQiXSv28Og=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-5Otet+KKVUjNkE\/hqcNWmt75H1K2VNuKPFagpRd6Ces=",
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-wNKhG3Ovx8jqxbscz2AALlsTLfI6GL2dyDhe63mSsoM=",
@@ -25,11 +25,11 @@
       "Microsoft.Extensions.FileSystemGlobbing.dll": "sha256-viiXOG0fwhWobT0TQ1ZOJiZBdRvYRlWbDtjz+6d8sQI=",
       "Microsoft.Extensions.Http.dll": "sha256-K5\/O91dt69IHKav69ftn+7DKPmnzkipTvwM4Sd4Zres=",
       "Microsoft.Extensions.Logging.dll": "sha256-GDZQCBtVHfrZZ6fL95lGoinLeUWLjQShLbfESwO7mrc=",
-      "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-1XXJ0VQ8pybOFNvf\/RA+k+pSfNRrsoMW2h9BItvFXVY=",
+      "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-w+c+xfLh8QIAwluhugyPc8sPvAmmIC\/UTxnugT7Oido=",
       "Microsoft.Extensions.Options.dll": "sha256-eGESyy9mRu8RcCGajAu4E8nxSmeB5nxiZkFPVaZ5Vl0=",
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH\/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
-      "Microsoft.JSInterop.dll": "sha256-tRzkW7Ekx3RsrBe894cfFYg4obJQxUjxuFkMwxh+EmA=",
-      "Microsoft.JSInterop.WebAssembly.dll": "sha256-x6oiDUwhHmg2BfCJ43UGTPi2SSASRtEyFgka5LU8eRM=",
+      "Microsoft.JSInterop.dll": "sha256-5Gw6JvdCXQHIlpy\/MeI8ekhyIJD4ovwAiwXu+AwG6F8=",
+      "Microsoft.JSInterop.WebAssembly.dll": "sha256-jjvkA2MkUDycoIIikuTOZFtCe2gJtIJl1sT7Vif+dgM=",
       "System.IO.Pipelines.dll": "sha256-OXr1SqT\/FRQmnxVa6n811yUyJraU4tzQs5skNCiDmiM=",
       "Microsoft.CSharp.dll": "sha256-bhhqi8sRBx1N8jw2O6V+Z3nkVobmjj2csZa2TXF9pS4=",
       "Microsoft.VisualBasic.Core.dll": "sha256-E7+QttmvONEAnNyUzmOR+lGf6ISeYZNBpRDS3D3ArXI=",
@@ -199,7 +199,7 @@
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
       "EShopBlazNew.Shared.dll": "sha256-fZeAOnwp7SZcEblhMLQRVYQX1Pdcc1L7kJeVqWanRJ4=",
       "EShopServicesClassLib.dll": "sha256-qbkEeUL9Dj9gIbfoNcl0WSyi8kcJ3OCUhzel6HjPJnU=",
-      "EShopBlazNew.Client.dll": "sha256-oKAvgx77J9+yimFp8OQEypjiMsVklF+qBI9p3EGWi5w="
+      "EShopBlazNew.Client.dll": "sha256-+T4ds9N8QVl+hKpU0SOBpkaxfY3mq1BVrftwlUTsBHs="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -207,7 +207,7 @@
     "pdb": {
       "EShopServicesClassLib.pdb": "sha256-17crALvwjjYSeAwiVUpWHRugoJxWtv9joM1lyP9rBmY=",
       "EShopBlazNew.Shared.pdb": "sha256-0yj2LELRm2LJSQN91kim\/K7Y7dFYtK9YAeq6nIGwWLI=",
-      "EShopBlazNew.Client.pdb": "sha256-jXp766wFjDOp\/08la\/6VhHqkEQGWGEJV3iQN7X5kBoU="
+      "EShopBlazNew.Client.pdb": "sha256-i9s6Y94U0cvdWByT8SjFojUuN61B2pU7yMZer+4unE0="
     },
     "runtime": {
       "dotnet.6.0.3.qprifoiun1.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",
