@@ -87,18 +87,23 @@ else
                             }
                         </InputSelect>
                         <InputSelect class="size-selector" ValueExpression="@(()=>@selectedSize)" Value="@selectedSize" 
-                                ValueChanged="@((ProductSize value) => SizeChanged(value))">
-                            @foreach (var size in sizeList)
+                                ValueChanged="@((byte value) => SizeChanged(value))">
+                            @if (@product.Category == ProductCategory.Shoes)
                             {
-                                <option value="@size">@size</option>
+                                @foreach (var size in sizeList)
+                                {
+                                    <option value="@size">@((ShoeSize)size)</option>
+                                }                          
                             }
+                            else
+                            {
+                                @foreach (var size in sizeList)
+                                {
+                                    <option value="@size">@((ProductSize)size)</option>
+                                }                        
+                            }
+
                         </InputSelect>
-@*                        <InputSelect Id="size" class="size-selector" @bind-Value="selectedSize" @oninput="SizeChanged">
-                            @foreach (var size in sizeList)
-                            {
-                                <option value="@size">@size</option>
-                            }
-                        </InputSelect>*@
                     </EditForm>
                 </div>
 
@@ -144,11 +149,11 @@ else
     private ProductModel? product;
     private ProductVariantModel? choosenProductVariant;
     private ProductColor selectedColor;
-    private ProductSize selectedSize;
+    private byte selectedSize;
     private ShoppingCartModel? shoppingCart;
 
     public List<ProductColor> colorList = new List<ProductColor>();
-    public List<ProductSize> sizeList = new List<ProductSize>();
+    public List<byte> sizeList = new List<byte>();
 
     public enum Change
     {
@@ -164,7 +169,7 @@ else
         selectedSize = choosenProductVariant.Size;
 
         colorList = new List<ProductColor>();
-        sizeList = new List<ProductSize>();
+        sizeList = new List<byte>();
 
         foreach (var productVariant in product.ProductVariants)
         {
@@ -190,7 +195,7 @@ else
     void ColorChanged(ProductColor color)
     {
         selectedColor = color;
-        sizeList = new List<ProductSize>();
+        sizeList = new List<byte>();
 
         foreach (var productVariant in product.ProductVariants)
         {
@@ -203,7 +208,7 @@ else
         }
     }
 
-    void SizeChanged(ProductSize size)
+    void SizeChanged(byte size)
     {
         selectedSize = size;
         colorList = new List<ProductColor>();

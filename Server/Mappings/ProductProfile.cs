@@ -9,15 +9,15 @@ public class ProductProfile : Profile
     public ProductProfile()
     {
         CreateMap<CreateProductVariantModel, ProductVariant>()
-            .ForMember(dest => dest.Size, act => act.MapFrom(src => (byte)src.Size))
+//            .ForMember(dest => dest.Size, act => act.MapFrom(src => (byte)src.Size))
             .ForMember(dest => dest.Color, act => act.MapFrom(src => (byte)src.Color));
 
         CreateMap<ProductVariantModel, ProductVariant>()
-            .ForMember(dest => dest.Size, act => act.MapFrom(src => (byte)src.Size))
+//            .ForMember(dest => dest.Size, act => act.MapFrom(src => (byte)src.Size))
             .ForMember(dest => dest.Color, act => act.MapFrom(src => (byte)src.Color));
 
         CreateMap<ProductVariant, ProductVariantModel>()
-            .ForMember(dest => dest.Size, act => act.MapFrom(src => (ProductSize)src.Size))
+//            .ForMember(dest => dest.Size, act => act.MapFrom(src => (ProductSize)src.Size))
             .ForMember(dest => dest.Color, act => act.MapFrom(src => (ProductColor)src.Color));
 
 
