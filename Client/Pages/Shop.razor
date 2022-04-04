@@ -91,7 +91,7 @@
     private IEnumerable categories = Enum.GetValues(typeof(ProductCategory));
 
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
         if ((ProductCategory)Category == ProductCategory.NoCategory)
         {
