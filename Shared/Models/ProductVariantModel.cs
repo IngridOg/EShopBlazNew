@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,23 @@ public enum ProductSize
 public enum ShoeSize
 {
     NoSize = 0,
+    [Display(ShortName = "35")]
     S35 = 1,
+    [Display(ShortName = "36")]
     S36 = 2,
+    [Display(ShortName = "37")]
     S37 = 3,
+    [Display(ShortName = "38")]
     S38 = 4,
+    [Display(ShortName = "39")]
     S39 = 5,
+    [Display(ShortName = "40")]
     S40 = 6,
+    [Display(ShortName = "41")]
     S41 = 7,
+    [Display(ShortName = "42")]
     S42 = 8,
+    [Display(ShortName = "43")]
     S43 = 9
 }
 
