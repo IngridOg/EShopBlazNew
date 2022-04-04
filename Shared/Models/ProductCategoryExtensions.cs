@@ -74,7 +74,7 @@ public enum HatsSubCategory
     Bucket = 6
 }
 
-public enum SunGlassesSubCategory
+public enum SunglassesSubCategory
 {
     NoValue = 0,
     BrowLine = 1,

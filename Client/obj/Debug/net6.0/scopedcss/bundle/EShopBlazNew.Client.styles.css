@@ -97,13 +97,18 @@
   display: flex;
   align-items: baseline;
 }
+.product-area .second-column .price-area .actual-price[b-budddxubjh] {
+  color: #20d3c2;
+  margin-right: 1rem;
+}
 .product-area .second-column .price-area .list-price[b-budddxubjh] {
   color: #AAAAAA;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .product-area .second-column .price-area .color-selector[b-budddxubjh] {
   color: #0E153D;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .product-area .second-column .price-area .size-selector[b-budddxubjh] {
   color: #0E153D;

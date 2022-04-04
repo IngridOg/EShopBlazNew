@@ -10,7 +10,7 @@ namespace EShopBlazNew.Shared.Models;
 
 public enum SellingSeason
 {
-    NoValue = 0,
+    NoSeason = 0,
     Winter = 1,
     Spring = 2,
     Summer = 3,

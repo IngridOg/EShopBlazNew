@@ -29,13 +29,18 @@
   display: flex;
   align-items: baseline;
 }
+.product-area .second-column .price-area .actual-price {
+  color: #20d3c2;
+  margin-right: 1rem;
+}
 .product-area .second-column .price-area .list-price {
   color: #AAAAAA;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .product-area .second-column .price-area .color-selector {
   color: #0E153D;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .product-area .second-column .price-area .size-selector {
   color: #0E153D;

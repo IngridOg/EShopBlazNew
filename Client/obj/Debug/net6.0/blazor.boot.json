@@ -197,17 +197,17 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "EShopBlazNew.Shared.dll": "sha256-7dcYQgvxWvmMwRsk2znptaI4RmCQTsp6ceZy3Q8zduI=",
-      "EShopServicesClassLib.dll": "sha256-rlM\/RrQdaKJdnsg+R2VDbIcQuQc1JRvfhrUmIt9dDY0=",
-      "EShopBlazNew.Client.dll": "sha256-PA\/n72z5YAWzZ2oBdpadU9UlhqkAkjxKh0S4rgowSFs="
+      "EShopBlazNew.Shared.dll": "sha256-Byp8VTPfyMdCNRuKBkgEtwJgS0oGIziNGdJtGmuzxAg=",
+      "EShopServicesClassLib.dll": "sha256-zozOAosPXU3Vr3Hkpu2xCg2UtURdhKbojIFkMyUxyks=",
+      "EShopBlazNew.Client.dll": "sha256-DpxxmPqMWYUgssi2LAIYbtvuNQj0OwR8qlZU2rMPiZ4="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "EShopServicesClassLib.pdb": "sha256-WM91knzpkbO1vx5vr6r7Ytd9VkMdlQoU4uL1161jfFw=",
-      "EShopBlazNew.Shared.pdb": "sha256-tXtAwir8D78eD5D95\/oWRs1UYJcOuoAFZUNCltuubYk=",
-      "EShopBlazNew.Client.pdb": "sha256-4DXO\/ljJ3go0Ahx4XJYpoKcAnFwsXLQiaH2A1bM6Z8U="
+      "EShopServicesClassLib.pdb": "sha256-RTKkCjRraMgm1RDMtKrQz+LtHoCL0NvPe0zXher79P8=",
+      "EShopBlazNew.Shared.pdb": "sha256-5UEfrV3oJVbUjgSw+Gn0uqvohuRZAGJ+Fk1sbGrAq1A=",
+      "EShopBlazNew.Client.pdb": "sha256-pzITbcItBaeZ3Ha2qRGakUzW8FQCAIyJi9oJl\/XeEdI="
     },
     "runtime": {
       "dotnet.6.0.3.qprifoiun1.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

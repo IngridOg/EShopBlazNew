@@ -68,7 +68,7 @@ else
                     <p>@product.Description</p>
                 </div>
                 <div class="price-area">
-                    <div class="theme">
+                    <div class="actual-price">
                         <h4>$@choosenProductVariant.Price</h4>
                     </div>
                     <div class="list-price">
@@ -78,13 +78,17 @@ else
                         }
                     </div>
                     <EditForm Model="choosenProductVariant">
-                        <InputSelect class="color-selector" ValueExpression="@(()=>@selectedColor)" Value="@selectedColor" 
-                                ValueChanged="@((ProductColor value) => ColorChanged(value))">
-                            @foreach (var color in colorList)
-                            {
-                                <option value="@color">@color</option>
-                            }
-                        </InputSelect>
+                        @if (@choosenProductVariant.Color != ProductColor.NoColor)
+                        {
+                            <InputSelect class="color-selector" ValueExpression="@(()=>@selectedColor)" Value="@selectedColor" 
+                                    ValueChanged="@((ProductColor value) => ColorChanged(value))">
+                                @foreach (var color in colorList)
+                                {
+                                    <option value="@color">@color</option>
+                                }
+                            </InputSelect>                        
+                        }
+
                         <InputSelect class="size-selector" ValueExpression="@(()=>@selectedSize)" Value="@selectedSize" 
                                 ValueChanged="@((byte value) => SizeChanged(value))">
 

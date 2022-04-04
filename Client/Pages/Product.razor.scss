@@ -34,14 +34,20 @@
             display: flex;
             align-items: baseline;
 
+            .actual-price {
+                color: $eshop-theme-color;
+                margin-right: 1rem;
+            }
+
             .list-price {
                 color: $dark-grey;
-                margin-left: 2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
             }
 
             .color-selector {
                 color: $eshop-midnightblue;
-                margin-left: 2rem;
+                margin-left: 1rem;
             }
 
             .size-selector {
