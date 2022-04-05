@@ -40,7 +40,7 @@ public class ProductsController : ControllerBase
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
         }
-        catch (Exception ex)
+        catch
         {
             throw;
         }
@@ -65,7 +65,7 @@ public class ProductsController : ControllerBase
             foreach (var p in dbProducts)
                 productModels.Add(_mapper.Map<ProductModel>(p));
         }
-        catch (Exception ex)
+        catch
         {
             throw;
         }
@@ -88,7 +88,7 @@ public class ProductsController : ControllerBase
             foreach (var p in dbProducts)
                 productModels.Add(_mapper.Map<ProductModel>(p));
         }
-        catch (Exception ex)
+        catch
         {
             throw;
         }
@@ -109,7 +109,7 @@ public class ProductsController : ControllerBase
                         .Include(p => p.ProductVariants)
                         .SingleOrDefaultAsync(p => p.Id == id);
         }
-        catch (Exception ex)
+        catch
         {
             throw;
         }

@@ -19,29 +19,28 @@ public class CustomerService : ICustomerService
         _http = httpClient;
     }
 
-    public async Task CreateCustomer(CreateCustomerModel customer)
+    //  CRUD for Customer
+    public async Task<CustomerModel> CreateCustomer(CreateCustomerModel createCustomerModel)
     {
+        if (createCustomerModel == null)
+            throw new ArgumentNullException(nameof(createCustomerModel));
 
-        if (customer == null)
-            throw new ArgumentNullException(nameof(customer));
+        var result = await _http.PostAsJsonAsync("/api/customers", createCustomerModel);
 
-        await _http.PostAsJsonAsync<CreateCustomerModel>("/api/customers", customer);
-
-        // HttpResponseMessage _response = await _http.PostAsJsonAsync<Customer>("/api/customers", customer);
-
-        // Return the customer that was created or null if none was created.
-        // return await _response.Content.ReadFromJsonAsync<Customer>();
+        if (result.IsSuccessStatusCode == false)
+        {
+            string message = await result.Content.ReadAsStringAsync();
+            throw new Exception(message);
+        }
+        else
+        {
+            return await result.Content.ReadFromJsonAsync<CustomerModel>();
+        }
     }
 
 
     public async Task<IEnumerable<CustomerModel>> GetCustomers()
     {
-        // forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
-        // customers = await Http.GetFromJsonAsync<Customer[]>("https://localhost:5001/api/customers");
-
-        // Should we use List<Customer> or IEnumerable<Customer> ?
-        // Shoud we use the route api/customers or api/customers/all ?
-
         // Returns a list of all customers or null.
 
         return await _http.GetFromJsonAsync<List<CustomerModel>>("/api/customers");
@@ -53,17 +52,12 @@ public class CustomerService : ICustomerService
         return await _http.GetFromJsonAsync<CustomerModel>("/api/customers/{id}");
     }
 
-    public async Task UpdateCustomer(int id, CustomerModel customer)
+    public async Task UpdateCustomer(int id, CustomerModel customerModel)
     {
-        if (customer == null)
-            throw new ArgumentNullException(nameof(customer));
+        if (customerModel == null)
+            throw new ArgumentNullException(nameof(customerModel));
 
-        await _http.PostAsJsonAsync($"/api/customers/{id}", customer);
-
-        // HttpResponseMessage _response = await _http.PostAsJsonAsync($"/api/customers/{id}", customer);
-
-        // Return the customer that was updated or null.
-        // return await _response.Content.ReadFromJsonAsync<Customer>();
+        await _http.PostAsJsonAsync($"/api/customers/{id}", customerModel);
     }
 
     public async Task DeleteCustomer(int id)

@@ -10,7 +10,7 @@
 {
     <!-- Loading. Show spinner. -->
 
-    <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="container d-flex justify-content-center align-items-center vh-50">
         <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
@@ -49,7 +49,7 @@ else
     </div>
 
     <!-- Show product. -->
-    <!-- In this simplified version of the application, always assume that the first productVariant is the choosen one.  -->
+    <!-- As a start, assume that the first productVariant is the choosen one.  -->
 
     @if (choosenProductVariant != null)
     {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jx6HddQug+p3l6EuyNEAAA8CTMu1Y6k7RVFqwvQSHVg=",
+  "Hash": "Hl/MiicbZ2IPJR1pzmiljNnA7pjuSjby0vspK8/ffC0=",
   "Source": "EShopBlazNew.Server",
   "BasePath": "_content/EShopBlazNew.Server",
   "Mode": "Default",
@@ -7033,23 +7033,6 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css.map"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\css\\appOriginal.css",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/appOriginal.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\appOriginal.css"
-    },
-    {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Project",
@@ -8036,12 +8019,12 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\breitling-AB2020161C1A1.jpg"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\BVOversizedSuareFrame.webp",
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\BVOversizedSquareFrame.webp",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "images/products/BVOversizedSuareFrame.webp",
+      "RelativePath": "images/products/BVOversizedSquareFrame.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8050,7 +8033,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\BVOversizedSuareFrame.webp"
+      "OriginalItemSpec": "wwwroot\\images\\products\\BVOversizedSquareFrame.webp"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\camilla-w-100-eco-merino-wool-black-hrb.jpg",

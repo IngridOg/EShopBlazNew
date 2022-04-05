@@ -11,30 +11,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        product=new();
-        product.Name="Cat-eye acetate sunglasses.";
-        product.Description = "";
-        product.Material = "";
-        product.Care = "";
-        product.Brand = "Saint Laurent";
-        product.Supplier = "";
-        product.Category = ProductCategory.Sunglasses;
-        product.SubCategory = (byte)SunglassesSubCategory.CatEye;
-        product.Season = SellingSeason.NoSeason;
 
-	newProduct = await ProdService.CreateProduct(product);
-
-	productVariant=new();
-	productVariant.ProductId = newProduct.Id;
-        productVariant.ListPrice = 395;
-        productVariant.Price = 395;
-        productVariant.ImageUrl="SLCatEye.webp";
-        productVariant.Size = (byte)ProductSize.M;
-        productVariant.Color = ProductColor.NoColor;
-        productVariant.NumberInStock = 35;
-        productVariant.OnSale = false;
-
-        await ProdService.CreateProductVariant(productVariant);
 
 
     }

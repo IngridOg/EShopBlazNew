@@ -45,7 +45,8 @@
             img {
                 position: relative;
                 left: 75%;
-                margin-left: -100%;
+                margin-left: -110%;
+                transform: scaleX(-1);
             }
         }
     }
@@ -71,7 +72,46 @@
             }
 
             .second-column {
-                grid-area: second;
+
+                img {
+                    position: absolute;
+                    left: 75%;
+                    margin-left: -75%;
+                    clip: rect(0px,700px,600px,0px);
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+
+    @include md {
+
+        .main-part {
+
+            .second-column {
+
+                img {
+                    position: absolute;
+                    left: 75%;
+                    margin-left: -60%;
+                    clip: rect(0px,800px,600px,200px);
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+
+    @include lg {
+
+        .main-part {
+
+            .second-column {
+
+                img {
+                    float: right;
+                    clip: rect(0px,1000px,600px,400px);
+                    transform: scaleX(-1);
+                }
             }
         }
     }

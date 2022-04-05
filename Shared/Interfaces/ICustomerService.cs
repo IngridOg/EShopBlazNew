@@ -9,11 +9,13 @@ namespace EShopBlazNew.Shared.Interfaces;
 
 public interface ICustomerService
 {
-    Task CreateCustomer(CreateCustomerModel customer);
+    Task<CustomerModel> CreateCustomer(CreateCustomerModel customer);
     Task<IEnumerable<CustomerModel>> GetCustomers();
     Task<CustomerModel> GetCustomer(int id);
     Task UpdateCustomer(int id, CustomerModel customer);
     Task DeleteCustomer(int id);
+
+    //Not yet implemented functionality.
 
     //Task CreateInvoice(InvoiceModel invoice);
     //Task<IEnumerable<InvoiceModel>> GetInvoices();

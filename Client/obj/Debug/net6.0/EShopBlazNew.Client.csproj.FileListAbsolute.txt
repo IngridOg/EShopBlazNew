@@ -1674,7 +1674,6 @@ C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\s
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\scopedcss\Shared\InfoBox4.razor.rz.scp.css
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\scopedcss\Shared\InfoBoxes.razor.rz.scp.css
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\scopedcss\bundle\EShopBlazNew.Client.styles.css
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\scopedcss\projectbundle\EShopBlazNew.Client.bundle.scp.css
 C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\Client\obj\Debug\net6.0\EShopBlazNew.Client.csproj.CopyComplete

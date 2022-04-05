@@ -36,8 +36,6 @@ public class ProductService : IProductService
         }
         else
         {
-//            return await result.Content.ReadFromJsonAsync<ProductModel>(new JsonSerializerOptions() 
-//                { ReferenceHandler = ReferenceHandler.Preserve });
             return await result.Content.ReadFromJsonAsync<ProductModel>();
         }
     }
@@ -45,42 +43,25 @@ public class ProductService : IProductService
 
     public async Task<IEnumerable<ProductModel>> GetProducts()
     {
-        //var options = new JsonSerializerOptions()
-        //{
-        //    ReferenceHandler = ReferenceHandler.Preserve
-        //};
-//        return await _http.GetFromJsonAsync<List<ProductModel>>("/api/products", options);
         return await _http.GetFromJsonAsync<List<ProductModel>>("/api/products");
     }
 
     public async Task<IEnumerable<ProductModel>> GetProducts(int category)
     {
-        //var options = new JsonSerializerOptions()
-        //{
-        //    ReferenceHandler = ReferenceHandler.Preserve
-        //};
-//        return await _http.GetFromJsonAsync<List<ProductModel>>($@"/api/products/GetByCategory/{category}", options);
         return await _http.GetFromJsonAsync<List<ProductModel>>($@"/api/products/GetByCategory/{category}");
     }
 
     public async Task<ProductModel> GetProduct(int id)
     {
-        //var options = new JsonSerializerOptions()
-        //{
-        //    ReferenceHandler = ReferenceHandler.Preserve
-        //};
-
-        // Return the product or null.
- //       return await _http.GetFromJsonAsync<ProductModel>($"/api/products/{id}", options);
         return await _http.GetFromJsonAsync<ProductModel>($"/api/products/{id}");
     }
 
-    public async Task UpdateProduct(int id, ProductModel product)
+    public async Task UpdateProduct(int id, ProductModel productModel)
     {
-        if (product == null)
-            throw new ArgumentNullException(nameof(product));
+        if (productModel == null)
+            throw new ArgumentNullException(nameof(productModel));
 
-        await _http.PostAsJsonAsync($"/api/products/{id}", product);
+        await _http.PostAsJsonAsync($"/api/products/{id}", productModel);
     }
 
     public async Task DeleteProduct(int id)
@@ -103,18 +84,16 @@ public class ProductService : IProductService
         }
         else
         {
- //           return await result.Content.ReadFromJsonAsync<ProductVariantModel>(new JsonSerializerOptions()
- //           { ReferenceHandler = ReferenceHandler.Preserve });
             return await result.Content.ReadFromJsonAsync<ProductVariantModel>();
         }
     }
 
-    public async Task UpdateProductVariant(int id, ProductVariantModel productVariant)
+    public async Task UpdateProductVariant(int id, ProductVariantModel productVariantModel)
     {
-        if (productVariant == null)
-            throw new ArgumentNullException(nameof(productVariant));
+        if (productVariantModel == null)
+            throw new ArgumentNullException(nameof(productVariantModel));
 
-        await _http.PostAsJsonAsync($"/api/productvariants/{id}", productVariant);
+        await _http.PostAsJsonAsync($"/api/productvariants/{id}", productVariantModel);
     }
 
     public async Task DeleteProductVariant(int id)

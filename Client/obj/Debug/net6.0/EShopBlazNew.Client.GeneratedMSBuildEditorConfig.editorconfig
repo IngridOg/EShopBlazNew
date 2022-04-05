@@ -22,14 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Pages/TestCreateCustomer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdENyZWF0ZUN1c3RvbWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,10 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/Carousel.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhcm91c2VsLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/_Imports.razor]
@@ -121,7 +109,3 @@ build_metadata.AdditionalFiles.CssScope = b-7y1gaz5f4e
 [C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-vc6dzsxb0u
-
-[C:/Users/ingri/Documents/DotNetUtbildning/EShopBlazNew/Client/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-y4jxe20t25

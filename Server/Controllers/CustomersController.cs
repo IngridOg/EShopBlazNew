@@ -40,7 +40,7 @@ public class CustomersController : ControllerBase
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
         }
-        catch (Exception ex)
+        catch
         {
             throw;
         }
@@ -63,7 +63,7 @@ public class CustomersController : ControllerBase
             foreach (var c in dbCustomers)
                 customerModels.Add(_mapper.Map<CustomerModel>(c));
         }
-        catch (Exception ex)
+        catch
         {
             throw;
         }

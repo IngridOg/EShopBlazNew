@@ -46,7 +46,7 @@ namespace EShopBlazNew.Server.Controllers
                 product.ProductVariants.Add(productVariant);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }
@@ -55,13 +55,6 @@ namespace EShopBlazNew.Server.Controllers
 
             return CreatedAtAction("GetProductVariant", new { id = productVariantModel.Id }, productVariantModel);
         }
-
-        // GET: api/ProductVariants
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<ProductVariant>>> GetProductVariants()
-        //{
-        //    return await _context.ProductVariants.ToListAsync();
-        //}
 
         // GET: api/ProductVariants/5
         [HttpGet("{id}")]
