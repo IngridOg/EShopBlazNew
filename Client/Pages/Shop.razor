@@ -95,13 +95,14 @@
     {
         if ((ProductCategory)Category == ProductCategory.NoCategory)
         {
-            products = new();
             foreach (var cat in categories)
             {
                 //  Show clothes from all product categories.
                 if (((ProductCategory)cat != ProductCategory.NoCategory) && ((ProductCategory)cat < ProductCategory.Kids))
                 {
                     newProducts = (List<ProductModel>) await ProdService.GetProducts((int)cat);
+                    if (products == null)
+                        products = new();
                     foreach (ProductModel prod in newProducts)
                     {
                         products.Add(prod);

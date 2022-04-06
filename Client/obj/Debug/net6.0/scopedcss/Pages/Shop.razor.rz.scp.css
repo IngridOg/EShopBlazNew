@@ -15,18 +15,6 @@
   justify-content: center;
 }
 
-.content-area[b-bdzfad2hph] {
-  /*    .badge {
-          font-family: $default-font;
-          font-size: 16px;
-          font-weight: $medium;
-          background-color: $eshop-midnightblue;
-          color: $eshop-theme-color;
-          height: 3rem;
-          position: absolute;
-          text-align: left;
-      }*/
-}
 .content-area a[b-bdzfad2hph], .content-area a:link[b-bdzfad2hph] {
   color: white;
   text-decoration: none;
