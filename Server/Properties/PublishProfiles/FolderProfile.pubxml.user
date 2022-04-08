@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>M:\eshop_pub</_PublishTargetUrl>
+    <History>True|2022-04-06T17:08:35.0883871Z;True|2022-04-06T16:41:33.5100797+02:00;True|2022-04-06T13:39:09.4851907+02:00;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="SqlConnection">
+      <Value>Data Source=MEDIALAPTOP\SQLEXPRESS%3bInitial Catalog=eshop-sqldb%3bPersist Security Info=True%3bUser ID=eshop_admin%3bPassword=354oP%25assw</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

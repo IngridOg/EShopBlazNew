@@ -1,0 +1,15 @@
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\EShopServicesClassLib.deps.json
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\EShopServicesClassLib.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\EShopServicesClassLib.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\EShopBlazNew.Shared.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\EShopBlazNew.Shared.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.csproj.AssemblyReference.cache
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.AssemblyInfoInputs.cache
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.AssemblyInfo.cs
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.csproj.CoreCompileInputs.cache
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.csproj.CopyComplete
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\refint\EShopServicesClassLib.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\EShopServicesClassLib.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\ref\EShopServicesClassLib.dll

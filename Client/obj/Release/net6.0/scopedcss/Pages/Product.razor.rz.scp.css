@@ -1,0 +1,73 @@
+.banner[b-budddxubjh] {
+  background-color: rgba(14, 21, 61, 0.85);
+  color: white;
+  height: 140px;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+}
+.banner .banner-content[b-budddxubjh] {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.banner .banner-content .path[b-budddxubjh] {
+  color: #20d3c2;
+}
+
+.product-area[b-budddxubjh] {
+  display: grid;
+  grid-template-areas: "picture" "info";
+}
+.product-area .first-column[b-budddxubjh] {
+  grid-area: picture;
+}
+.product-area .second-column[b-budddxubjh] {
+  grid-area: info;
+}
+.product-area .second-column .price-area[b-budddxubjh] {
+  display: flex;
+  align-items: baseline;
+}
+.product-area .second-column .price-area .actual-price[b-budddxubjh] {
+  color: #20d3c2;
+  margin-right: 1rem;
+}
+.product-area .second-column .price-area .list-price[b-budddxubjh] {
+  color: #AAAAAA;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.product-area .second-column .price-area .color-selector[b-budddxubjh] {
+  color: #0E153D;
+  margin-left: 2rem;
+}
+.product-area .second-column .price-area .size-selector[b-budddxubjh] {
+  color: #0E153D;
+  margin-left: 1rem;
+}
+.product-area .second-column .button-row[b-budddxubjh] {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .banner[b-budddxubjh] {
+    margin-bottom: 5rem;
+  }
+
+  .product-area[b-budddxubjh] {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    grid-template-areas: "picture info";
+    margin-bottom: -1rem;
+  }
+  .product-area .first-column[b-budddxubjh] {
+    grid-area: picture;
+  }
+  .product-area .second-column[b-budddxubjh] {
+    grid-area: info;
+  }
+}
+
+/*# sourceMappingURL=Product.razor.css.map */

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fAfWRFLCNw/NoLQkNrRCJeOU13pMnPsXt0JusKW72xU=",
+  "Hash": "mmw+XaTntsFc/cyV/agVLWdujBK3BfqDLOBTxYjUnUU=",
   "Source": "EShopBlazNew.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -204,23 +204,6 @@
       "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\EShopServicesClassLib\\bin\\Debug\\net6.0\\EShopServicesClassLib.pdb"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\ingri\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\icudt.dat"
-    },
-    {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Computed",
@@ -270,6 +253,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\ingri\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "EShopBlazNew.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\ingri\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -7038,6 +7038,23 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css.map"
     },
     {
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "EShopBlazNew.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Discovered",
@@ -7138,23 +7155,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
@@ -7803,23 +7803,6 @@
       "OriginalItemSpec": "wwwroot\\images\\Product thumb.svg"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\2x2_jacka_damherr_start.jpg",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "images/products/2x2_jacka_damherr_start.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\2x2_jacka_damherr_start.jpg"
-    },
-    {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\2x2_jacka_damherr_start_cut.jpg",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Discovered",
@@ -7835,6 +7818,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\2x2_jacka_damherr_start_cut.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\2x2_jacka_damherr_start.jpg",
+      "SourceId": "EShopBlazNew.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/products/2x2_jacka_damherr_start.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\2x2_jacka_damherr_start.jpg"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\AshBlack.jpg",
@@ -8041,6 +8041,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\BVOversizedSquareFrame.webp"
     },
     {
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\c-crowngra1.jpg",
+      "SourceId": "EShopBlazNew.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/products/c-crowngra1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\c-crowngra1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\camilla-w-100-eco-merino-wool-black-hrb.jpg",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Discovered",
@@ -8073,23 +8090,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\CaviarBlack.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\c-crowngra1.jpg",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "images/products/c-crowngra1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\c-crowngra1.jpg"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\CheckBoyfriendShir.webp",

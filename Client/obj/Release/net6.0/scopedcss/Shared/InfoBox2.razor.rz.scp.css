@@ -1,0 +1,28 @@
+.layout-outer[b-noqb8adhp1] {
+  height: 137px;
+  min-width: 250px;
+  margin: 6rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #20d3c2;
+}
+.layout-outer img[b-noqb8adhp1] {
+  margin: 0.3rem;
+  width: 64px;
+  height: 64px;
+  flex: 25%;
+}
+.layout-outer .layout-inner[b-noqb8adhp1] {
+  margin: 0.3rem;
+  flex: 75%;
+}
+.layout-outer .layout-inner h7[b-noqb8adhp1] {
+  color: white;
+}
+.layout-outer .layout-inner p[b-noqb8adhp1] {
+  color: white;
+}
+
+/*# sourceMappingURL=InfoBox2.razor.css.map */
