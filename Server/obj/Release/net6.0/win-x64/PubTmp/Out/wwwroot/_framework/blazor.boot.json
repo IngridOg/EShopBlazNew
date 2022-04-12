@@ -7,9 +7,9 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "EShopBlazNew.Client.dll": "sha256-9hAk6xIOieBzAx+NU371R7Pn2h9h9gK+ye657uEM8OI=",
+      "EShopBlazNew.Client.dll": "sha256-7VfW8OF0eDMlOpGdajMe4L1ibbgvvqYEBv\/wTfXw6xs=",
       "EShopBlazNew.Shared.dll": "sha256-8t1V1qAMB42P2ev+Z8WIztQ+39p5OjhlNGrPi9AUdGE=",
-      "EShopServicesClassLib.dll": "sha256-Hku1TSvrUEwwYs08M1NUQ2wRjl6xCDzh9qBChHJn4So=",
+      "EShopServicesClassLib.dll": "sha256-MAZGpIbqjEUi6kp264Dw6w189qoP6jL2OwWY\/PG7u1s=",
       "Microsoft.AspNetCore.Components.dll": "sha256-7muXXhg9LkrjpomuwyS4pfBLsIkQQ8O+IYMLfb45F6o=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-IgZ9ruC3OdZxWws3iUfQd0TT5lTLWlLE80hECXTZoAI=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-9dFYIHFue3yMmYpHBuDtK7RLFGRRDKIAtqFkXi2CRmI=",

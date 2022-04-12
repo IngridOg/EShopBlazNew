@@ -53,7 +53,8 @@ public enum ProductColor
     Brown = 8,
     Beige = 9,
     White = 10,
-    Black = 11
+    Black = 11,
+    Grey = 12
 }
 public class ProductVariantModel
 {
