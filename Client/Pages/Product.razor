@@ -6,7 +6,7 @@
 <PageTitle>Kenkata</PageTitle>
 
 
-@if (product == null)
+@if (_product == null)
 {
     <!-- Loading. Show spinner. -->
 
@@ -36,13 +36,13 @@ else
                 <p>&nbsp;/&nbsp;</p>
             </div>
             <div class="path">
-                <p>@product.Category.GetString()</p>
+                <p>@_product.Category.GetString()</p>
             </div>
             <div class="d-none d-md-block">
                 <p>&nbsp;/&nbsp;</p>
             </div>
             <div class="d-none d-md-block">
-                <p>@product.Name</p>
+                <p>@_product.Name</p>
             </div>
 
         </div>
@@ -51,36 +51,36 @@ else
     <!-- Show product. -->
     <!-- As a start, assume that the first productVariant is the choosen one.  -->
 
-    @if (choosenProductVariant != null)
+    @if (_choosenProductVariant != null)
     {
 
         <div class="container product-area">
             <div class="first-column">
                 <div class="picture">
-                    <img src="images/products/@choosenProductVariant.ImageUrl" style="height:100%; width:100%;" />
+                    <img src="images/products/@_choosenProductVariant.ImageUrl" style="height:100%; width:100%;" />
                 </div>
             </div>
             <div class="second-column">
                 <div class="theme">
-                    <h4>@product.Name</h4>
+                    <h4>@_product.Name</h4>
                 </div>
                 <div class="product-description">
-                    <p>@product.Description</p>
+                    <p>@_product.Description</p>
                 </div>
                 <div class="price-area">
                     <div class="actual-price">
-                        <h4>$@choosenProductVariant.Price</h4>
+                        <h4>$@_choosenProductVariant.Price</h4>
                     </div>
                     <div class="list-price">
-                        @if (@choosenProductVariant.Price != @choosenProductVariant.ListPrice)
+                        @if (@_choosenProductVariant.Price != @_choosenProductVariant.ListPrice)
                         {
-                            <p><del>$@choosenProductVariant.ListPrice</del></p>
+                            <p><del>$@_choosenProductVariant.ListPrice</del></p>
                         }
                     </div>
-                    <EditForm Model="choosenProductVariant">
-                        @if (@choosenProductVariant.Color != ProductColor.NoColor)
+                    <EditForm Model="_choosenProductVariant">
+                        @if (@_choosenProductVariant.Color != ProductColor.NoColor)
                         {
-                            <InputSelect class="color-selector" ValueExpression="@(()=>@selectedColor)" Value="@selectedColor" 
+                            <InputSelect class="color-selector" ValueExpression="@(()=>@_selectedColor)" Value="@_selectedColor" 
                                     ValueChanged="@((ProductColor value) => ColorChanged(value))">
                                 @foreach (var color in colorList)
                                 {
@@ -89,10 +89,10 @@ else
                             </InputSelect>                        
                         }
 
-                        <InputSelect class="size-selector" ValueExpression="@(()=>@selectedSize)" Value="@selectedSize" 
+                        <InputSelect class="size-selector" ValueExpression="@(()=>@_selectedSize)" Value="@_selectedSize" 
                                 ValueChanged="@((byte value) => SizeChanged(value))">
 
-                            @switch (@product.Category)
+                            @switch (@_product.Category)
                             {
                             case @ProductCategory.Shoes:
                                 @foreach (var size in sizeList)
@@ -120,7 +120,7 @@ else
                         <button type="button" @onclick="(() => ChangeNumberOfItems(Change.Decrease))" class="rounded-start border-end-0 btn-decrease">
                             <p>-</p>
                         </button>
-                        <button type="button" class="btn-number-of-items"><p>@numberOfItems</p></button>
+                        <button type="button" class="btn-number-of-items"><p>@_numberOfItems</p></button>
                         <button type="button" @onclick="(() => ChangeNumberOfItems(Change.Increase))" class="rounded-end border-start-0 btn-increase">
                             <p>+</p>
                         </button>
@@ -145,18 +145,18 @@ else
 @code {
     [CascadingParameter]
     protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
-
+    
     [Parameter]
     public int Id { get; set; } = 0;
 
-    private CustomerModel? customer;
-    private DetailModel? detail;
-    private int numberOfItems = 1;
-    private ProductModel? product;
-    private ProductVariantModel? choosenProductVariant;
-    private ProductColor selectedColor;
-    private byte selectedSize;
-    private ShoppingCartModel? shoppingCart;
+    private CustomerModel? _customer;
+    private DetailModel? _detail;
+    private int _numberOfItems = 1;
+    private ProductModel? _product;
+    private ProductVariantModel? _choosenProductVariant;
+    private ProductColor _selectedColor;
+    private byte _selectedSize;
+    private ShoppingCartModel? _shoppingCart;
 
     public List<ProductColor> colorList = new List<ProductColor>();
     public List<byte> sizeList = new List<byte>();
@@ -168,64 +168,64 @@ else
     }
     protected override async Task OnInitializedAsync()
     {
-        product = await ProdService.GetProduct(Id);
-        choosenProductVariant = product.ProductVariants.ToList()[0];
+        _product = await ProdService.GetProduct(Id);
+        _choosenProductVariant = _product.ProductVariants.ToList()[0];
 
-        selectedColor = choosenProductVariant.Color;
-        selectedSize = choosenProductVariant.Size;
+        _selectedColor = _choosenProductVariant.Color;
+        _selectedSize = _choosenProductVariant.Size;
 
         colorList = new List<ProductColor>();
         sizeList = new List<byte>();
 
-        foreach (var productVariant in product.ProductVariants)
+        foreach (var productVariant in _product.ProductVariants)
         {
-            if (productVariant.Size == choosenProductVariant.Size)
+            if (productVariant.Size == _choosenProductVariant.Size)
                 colorList.Add(productVariant.Color);
-            if (productVariant.Color == choosenProductVariant.Color)
+            if (productVariant.Color == _choosenProductVariant.Color)
                 sizeList.Add(productVariant.Size);
         }
     }
 
-    void ChangeNumberOfItems(Change Change)
+    void ChangeNumberOfItems(Change change)
     {
-        if (Change == Change.Decrease && numberOfItems > 0)
+        if (change == Change.Decrease && _numberOfItems > 0)
         {
-            numberOfItems--;
+            _numberOfItems--;
         }
-        else if (Change == Change.Increase && numberOfItems < 99)
+        else if (change == Change.Increase && _numberOfItems < 99)
         {
-            numberOfItems++;
+            _numberOfItems++;
         }
     }
 
     void ColorChanged(ProductColor color)
     {
-        selectedColor = color;
+        _selectedColor = color;
         sizeList = new List<byte>();
 
-        foreach (var productVariant in product.ProductVariants)
+        foreach (var productVariant in _product.ProductVariants)
         {
-            if (productVariant.Color == selectedColor)
+            if (productVariant.Color == _selectedColor)
             {
                 sizeList.Add(productVariant.Size);
-                if (productVariant.Size == selectedSize)
-                    choosenProductVariant = productVariant;               
+                if (productVariant.Size == _selectedSize)
+                    _choosenProductVariant = productVariant;               
             }
         }
     }
 
     void SizeChanged(byte size)
     {
-        selectedSize = size;
+        _selectedSize = size;
         colorList = new List<ProductColor>();
 
-        foreach (var productVariant in product.ProductVariants)
+        foreach (var productVariant in _product.ProductVariants)
         {           
-            if (productVariant.Size == selectedSize)
+            if (productVariant.Size == _selectedSize)
             {
                 colorList.Add(productVariant.Color);
-                if (productVariant.Color == selectedColor)
-                    choosenProductVariant = productVariant;               
+                if (productVariant.Color == _selectedColor)
+                    _choosenProductVariant = productVariant;               
             }
         }        
     }
@@ -234,39 +234,39 @@ else
     {
         if (User != null && User.IsAuthenticated() && User.CustomerId != null)
         {
-            customer = await CustService.GetCustomer((int)User.CustomerId);
-            if (customer != null)
+            _customer = await CustService.GetCustomer((int)User.CustomerId);
+            if (_customer != null)
             {
                 // In this simplified version assume there is only one shopping cart per customer.
-                shoppingCart = customer.ShoppingCartModels.ToList()[0];
+                _shoppingCart = _customer.ShoppingCartModels.ToList()[0];
             }
             else
             {
                 // Use a shopping cart that is not yet connected to any customer.
-                shoppingCart = Globals.ShoppingCart;                
+                _shoppingCart = Globals.ShoppingCart;                
             }
         }
         else
         {
             // Use a shopping cart that is not yet connected to any customer.
-            shoppingCart = Globals.ShoppingCart;
+            _shoppingCart = Globals.ShoppingCart;
         }
 
-        if (shoppingCart != null)
+        if (_shoppingCart != null)
         {
             // Add product to shopping cart.
 
-            detail = new DetailModel();
-            detail.RowNr = shoppingCart.Details.Count + 1;
-            detail.Quantity = numberOfItems;
-            detail.SubTotal = detail.Quantity * (int)choosenProductVariant.Price;
-            detail.ProductVariant = choosenProductVariant;
-            detail.ProductVariantId = choosenProductVariant.Id;
-            shoppingCart.Details.Add(detail);
+            _detail = new DetailModel();
+            _detail.RowNr = _shoppingCart.Details.Count + 1;
+            _detail.Quantity = _numberOfItems;
+            _detail.SubTotal = _detail.Quantity * (int)_choosenProductVariant.Price;
+            _detail.ProductVariant = _choosenProductVariant;
+            _detail.ProductVariantId = _choosenProductVariant.Id;
+            _shoppingCart.Details.Add(_detail);
 
             // Update cart total in header.
 
-            UpdateShoppingCart.InvokeAsync(shoppingCart);
+            UpdateShoppingCart.InvokeAsync(_shoppingCart);
         }
     }
 }

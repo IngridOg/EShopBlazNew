@@ -2,7 +2,7 @@
 
 <h3>Customers</h3>
 
-@if (customers == null)
+@if (_customers == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -16,7 +16,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var c in customers)
+            @foreach (var c in _customers)
             {
                 <tr>
                     <td>@c.FirstName</td>
@@ -28,14 +28,14 @@ else
 }
 
 @code {
-    private IEnumerable<CustomerModel> customers;
+    private IEnumerable<CustomerModel> _customers;
 
     [Inject]
     public ICustomerService CustService { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        customers = await CustService.GetCustomers();
+        _customers = await CustService.GetCustomers();
     }
 
 }

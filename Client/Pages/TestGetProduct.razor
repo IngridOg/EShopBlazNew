@@ -2,7 +2,7 @@
 
 <h3>TestGetProduct</h3>
 
-@if (product == null)
+@if (_product == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -18,9 +18,9 @@ else
         <tbody>
 
             <tr>
-                <td>@product.Name</td>
-                <td>@product.Description</td>
-                @foreach (ProductVariantModel v in product.ProductVariants)
+                <td>@_product.Name</td>
+                <td>@_product.Description</td>
+                @foreach (ProductVariantModel v in _product.ProductVariants)
                 {
                     <td>@v.ListPrice</td>
                     <td>@v.Price</td>
@@ -32,13 +32,13 @@ else
 }
 
 @code {
-    private ProductModel product;
+    private ProductModel _product;
 
     [Inject]
     public IProductService ProdService { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        product = await ProdService.GetProduct(5);
+        _product = await ProdService.GetProduct(5);
     }
 }

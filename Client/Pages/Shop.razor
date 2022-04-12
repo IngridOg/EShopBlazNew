@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    @if (products == null)
+    @if (_products == null)
     {
         <!-- Loading. Show spinner. -->
 
@@ -43,7 +43,7 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 
-                @foreach (var product in products)
+                @foreach (var product in _products)
                 {
                     @if (@product.ProductVariants.Count > 0)
                     {
@@ -76,8 +76,6 @@
     }
  
 
-
-
 @code {
     [CascadingParameter]
     protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
@@ -85,34 +83,22 @@
     [Parameter]
     public int Category { get; set;  }
 
-    private List<ProductModel> products;
-    private List<ProductModel> newProducts;
+    private List<ProductModel> _products;
 
-    private IEnumerable categories = Enum.GetValues(typeof(ProductCategory));
+    private IEnumerable _categories = Enum.GetValues(typeof(ProductCategory));
 
 
     protected override async Task OnParametersSetAsync()
     {
+
         if ((ProductCategory)Category == ProductCategory.NoCategory)
         {
-            foreach (var cat in categories)
-            {
-                //  Show clothes from all product categories.
-                if (((ProductCategory)cat != ProductCategory.NoCategory) && ((ProductCategory)cat < ProductCategory.Kids))
-                {
-                    newProducts = (List<ProductModel>) await ProdService.GetProducts((int)cat);
-                    if (products == null)
-                        products = new();
-                    foreach (ProductModel prod in newProducts)
-                    {
-                        products.Add(prod);
-                    }
-                }              
-            }
+            //  Show products from the first category.
+            _products = (List<ProductModel>) await ProdService.GetProducts(1);
         }
         else
         {
-            products = (List<ProductModel>) await ProdService.GetProducts(Category);
+            _products = (List<ProductModel>) await ProdService.GetProducts(Category);
         }
     }
 }

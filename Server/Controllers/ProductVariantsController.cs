@@ -34,7 +34,6 @@ namespace EShopBlazNew.Server.Controllers
             ProductVariant productVariant;
             ProductVariantModel productVariantModel;
 
-
             try
             {
                 product = await _context.Products.FindAsync(model.ProductId);

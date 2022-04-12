@@ -24,7 +24,7 @@
       </div>
     </div>
 
-@if (shoppingCart == null)
+@if (_shoppingCart == null)
 {
     <!-- Loading. Show spinner. -->
 
@@ -56,7 +56,7 @@ else
           </thead>
           <tbody id="product-list">
 
-        @foreach (var detail in shoppingCart.Details)
+        @foreach (var detail in _shoppingCart.Details)
         {
             @if (detail.ProductVariant != null && detail.ProductVariant.OwnProduct != null)
             {
@@ -64,7 +64,7 @@ else
             <tr>
               <td>
                 <div class="box-remove-button">
-                  <a @onclick="(() => RemoveItem(shoppingCart, detail))">
+                  <a @onclick="(() => RemoveItem(_shoppingCart, detail))">
                     <img src="images/Close icon.svg" alt="Remove item.">
                   </a>
                 </div>
@@ -79,11 +79,11 @@ else
               <td>
                 <div class="btn-number-of-items-group" role="group" aria-label="Increase or decrease number of items to buy.">
                     
-                    <button type="button" @onclick="(() => ChangeNumberOfItems(shoppingCart, detail, Change.Decrease))" class="rounded-start border-end-0 btn-decrease">
+                    <button type="button" @onclick="(() => ChangeNumberOfItems(_shoppingCart, detail, Change.Decrease))" class="rounded-start border-end-0 btn-decrease">
                         <p>-</p>
                     </button>
                     <button type="button" class="btn-number-of-items"><p>@detail.Quantity</p></button>
-                    <button type="button" @onclick="(() => ChangeNumberOfItems(shoppingCart, detail,  Change.Increase))" class="rounded-end border-start-0 btn-increase">
+                    <button type="button" @onclick="(() => ChangeNumberOfItems(_shoppingCart, detail,  Change.Increase))" class="rounded-end border-start-0 btn-increase">
                         <p>+</p>
                     </button>
                 </div>
@@ -119,7 +119,7 @@ else
         <div class="container mt-3">
           <div class="row-cart-totals">
             <h6>Subtotal</h6>
-            <h6 class="theme">$@shoppingCartSubTotal</h6>
+            <h6 class="theme">$@_shoppingCartSubTotal</h6>
           </div>
           <hr class="divider">
           <div class="row-cart-totals">
@@ -130,21 +130,21 @@ else
 
               <form name="shippingForm" class="shipping-form">
                 <label>Flat rate:
-                  <label class="theme"> $@Globals.shippingFlatRate
+                  <label class="theme"> $@Globals.ShippingFlatRate
                     <input type="radio" value="shipFlatRate" name="shippingRadio" class="theme" @onchange="(() => 
-                        UpdateShipping(shoppingCart, TypeOfShipping.FlatRate, Globals.shippingFlatRate))" checked>
+                        UpdateShipping(_shoppingCart, TypeOfShipping.FlatRate, Globals.ShippingFlatRate))" checked>
                   </label>
                 </label>
                 <label>Free shipping:
-                  <label class="theme"> $@Globals.shippingFree
+                  <label class="theme"> $@Globals.ShippingFree
                     <input type="radio" value="shipFree" name="shippingRadio" class="theme" @onchange="(() => 
-                        UpdateShipping(shoppingCart, TypeOfShipping.Free, Globals.shippingFree))">
+                        UpdateShipping(_shoppingCart, TypeOfShipping.Free, Globals.ShippingFree))">
                   </label>
                 </label>
                 <label>Local pickup:
-                  <label class="theme">$@Globals.shippingLocalPickup
+                  <label class="theme">$@Globals.ShippingLocalPickup
                     <input type="radio" value="shipLocalPickUp" name="shippingRadio" class="theme" @onchange="(() => 
-                        UpdateShipping(shoppingCart, TypeOfShipping.LocalPickup, Globals.shippingLocalPickup))">
+                        UpdateShipping(_shoppingCart, TypeOfShipping.LocalPickup, Globals.ShippingLocalPickup))">
                   </label>
                 </label>
                 <label>Shipping to AL.</label>
@@ -155,7 +155,7 @@ else
           <hr class="divider">
           <div class="row-cart-totals">
             <h5>TOTAL</h5>
-            <h5 class="theme">$@shoppingCartTotal</h5>
+            <h5 class="theme">$@_shoppingCartTotal</h5>
           </div>
           <div class="row-cart-totals mt-3">
             <button type="button" class="btn-proceed-to-checkout">PROCEED TO CHECKOUT</button>
@@ -170,13 +170,13 @@ else
     [CascadingParameter]
     protected EventCallback<ShoppingCartModel> UpdateShoppingCart { get; set; }
 
-    private ProductModel? product;
-    private CustomerModel? customer;
-    private ShoppingCartModel? shoppingCart;
+    private ProductModel? _product;
+    private CustomerModel? _customer;
+    private ShoppingCartModel? _shoppingCart;
 
-    private int shippingFee = Globals.shippingFlatRate;
-    private int shoppingCartSubTotal;
-    private int shoppingCartTotal;
+    private int _shippingFee = Globals.ShippingFlatRate;
+    private int _shoppingCartSubTotal;
+    private int _shoppingCartTotal;
 
 
     public enum Change
@@ -190,101 +190,101 @@ else
 
         if (User != null && User.IsAuthenticated() && User.CustomerId != null)
         {
-            customer = await CustService.GetCustomer((int)User.CustomerId);
-            if (customer != null)
+            _customer = await CustService.GetCustomer((int)User.CustomerId);
+            if (_customer != null)
             {
                 // In this simplified version there is only one shopping cart per customer.
-                shoppingCart = customer.ShoppingCartModels.ToList()[0];
+                _shoppingCart = _customer.ShoppingCartModels.ToList()[0];
             }
             else
             {
                 // Use a shopping cart that is not yet connected to any customer.
-                shoppingCart = Globals.ShoppingCart;
+                _shoppingCart = Globals.ShoppingCart;
             }
         }
         else
         {
             // Use a shopping cart that is not yet connected to any customer.
-            shoppingCart = Globals.ShoppingCart;
+            _shoppingCart = Globals.ShoppingCart;
         }
 
-        if (shoppingCart != null)
+        if (_shoppingCart != null)
         {
-            shoppingCart.ShippingType = TypeOfShipping.FlatRate;
+            _shoppingCart.ShippingType = TypeOfShipping.FlatRate;
 
-            foreach (var detail in shoppingCart.Details)
+            foreach (var detail in _shoppingCart.Details)
             {
                 if (detail.ProductVariant != null)
                 {
-                    product = await ProdService.GetProduct((int)detail.ProductVariant.ProductId);
+                    _product = await ProdService.GetProduct((int)detail.ProductVariant.ProductId);
 
-                    if (product != null)
-                        detail.ProductVariant.OwnProduct = product;                    
+                    if (_product != null)
+                        detail.ProductVariant.OwnProduct = _product;                    
                 }
 
             }
 
             // Update Cart Totals in header.
-            UpdateShoppingCart.InvokeAsync(shoppingCart);
+            UpdateShoppingCart.InvokeAsync(_shoppingCart);
 
             // Update Cart Totals on current page.
-            UpdateShoppingCartTotals(shoppingCart);
+            UpdateShoppingCartTotals(_shoppingCart);
         }
     }
 
-    public async Task ChangeNumberOfItems(ShoppingCartModel _shoppingCart, DetailModel _detail, Change _change)
+    public void ChangeNumberOfItems(ShoppingCartModel shoppingCart, DetailModel detail, Change change)
     {
-        if (_change == Change.Decrease && _detail.Quantity > 0)
+        if (change == Change.Decrease && detail.Quantity > 0)
         {
-            _detail.Quantity--;
+            detail.Quantity--;
         }
-        else if (_change == Change.Increase && _detail.Quantity < 99)
+        else if (change == Change.Increase && detail.Quantity < 99)
         {
-            _detail.Quantity++;
+            detail.Quantity++;
         }
-        _detail.SubTotal = (int)_detail.Quantity * (int)_detail.ProductVariant.Price;
+        detail.SubTotal = (int)detail.Quantity * (int)detail.ProductVariant.Price;
 
         // Update Cart Totals in header.
-        UpdateShoppingCart.InvokeAsync(_shoppingCart);
+        UpdateShoppingCart.InvokeAsync(shoppingCart);
 
         // Update Cart Totals on current page.
-        UpdateShoppingCartTotals(_shoppingCart);
+        UpdateShoppingCartTotals(shoppingCart);
     }
 
-    public async Task RemoveItem(ShoppingCartModel _shoppingCart, DetailModel _detail)
+    public async Task RemoveItem(ShoppingCartModel shoppingCart, DetailModel detail)
     {
-        _shoppingCart.Details.Remove(_detail);
+        shoppingCart.Details.Remove(detail);
 
         // Update Cart Totals in header.
-        UpdateShoppingCart.InvokeAsync(_shoppingCart);
+        UpdateShoppingCart.InvokeAsync(shoppingCart);
 
         // Update Cart Totals on current page.
-        UpdateShoppingCartTotals(_shoppingCart);
+        UpdateShoppingCartTotals(shoppingCart);
 
         await InvokeAsync(() => this.StateHasChanged());
     }
 
-    public void UpdateShoppingCartTotals(ShoppingCartModel _shoppingCart)
+    public void UpdateShoppingCartTotals(ShoppingCartModel shoppingCart)
     {
-        shoppingCartSubTotal = 0;
+        _shoppingCartSubTotal = 0;
 
-        foreach (var item in _shoppingCart.Details)
+        foreach (var item in shoppingCart.Details)
             if (item.ProductVariant != null)
-                shoppingCartSubTotal += (int)item.ProductVariant.Price * item.Quantity;
+                _shoppingCartSubTotal += (int)item.ProductVariant.Price * item.Quantity;
 
-        shoppingCartTotal = shoppingCartSubTotal + shippingFee;
+        _shoppingCartTotal = _shoppingCartSubTotal + _shippingFee;
     }
 
-    public void UpdateShipping(ShoppingCartModel _shoppingCart, TypeOfShipping _shippingType, int _newShippingFee)
+    public void UpdateShipping(ShoppingCartModel shoppingCart, TypeOfShipping shippingType, int newShippingFee)
     {
-        _shoppingCart.ShippingType = _shippingType;
-        shippingFee = _newShippingFee;
+        shoppingCart.ShippingType = shippingType;
+        _shippingFee = newShippingFee;
 
         // Update Cart Totals in header.
-        UpdateShoppingCart.InvokeAsync(_shoppingCart);
+        UpdateShoppingCart.InvokeAsync(shoppingCart);
 
         // Update Cart Totals on current page.
-        UpdateShoppingCartTotals(_shoppingCart);
+        UpdateShoppingCartTotals(shoppingCart);
     }
 
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VdiOEP+CeiSPgi9+4WI/02Xfchh58apqRz+NNACrjWw=",
+  "Hash": "emRJobYQHmAHP9SmRfLRd0AG86uREcvbZJVmx44/4KU=",
   "Source": "EShopBlazNew.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -4010,23 +4010,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\GhostIris.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\gift-guide-men-4.htm",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "images/products/gift-guide-men-4.htm",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\gift-guide-men-4.htm"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\wwwroot\\images\\products\\GRectangularFrame.webp",

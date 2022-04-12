@@ -1,0 +1,15 @@
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\win-x64\EShopServicesClassLib.deps.json
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\win-x64\EShopServicesClassLib.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\win-x64\EShopServicesClassLib.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\win-x64\EShopBlazNew.Shared.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\bin\Release\net6.0\win-x64\EShopBlazNew.Shared.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.csproj.AssemblyReference.cache
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.AssemblyInfoInputs.cache
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.AssemblyInfo.cs
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.csproj.CoreCompileInputs.cache
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.csproj.CopyComplete
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\refint\EShopServicesClassLib.dll
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\EShopServicesClassLib.pdb
+C:\Users\ingri\Documents\DotNetUtbildning\EShopBlazNew\EShopServicesClassLib\obj\Release\net6.0\win-x64\ref\EShopServicesClassLib.dll

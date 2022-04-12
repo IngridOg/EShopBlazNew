@@ -100,11 +100,9 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<ProductModel>> GetProduct(int id)
     {
         Product product;
- //       int idInt;
 
         try
         {
-//            idInt = Int32.Parse(id);
             product = await _context.Products
                         .Include(p => p.ProductVariants)
                         .SingleOrDefaultAsync(p => p.Id == id);

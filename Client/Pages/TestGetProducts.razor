@@ -2,7 +2,7 @@
 
 <h3>TestGetProducts</h3>
 
-@if (products == null)
+@if (_products == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -16,7 +16,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var p in products)
+            @foreach (var p in _products)
             {
                 <tr>
                     <td>@p.Name</td>
@@ -32,13 +32,13 @@ else
 }
 
 @code {
-    private IEnumerable<ProductModel> products;
+    private IEnumerable<ProductModel> _products;
 
     [Inject]
     public IProductService ProdService { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        products = await ProdService.GetProducts((int)ProductCategory.NoCategory);
+        _products = await ProdService.GetProducts((int)ProductCategory.NoCategory);
     }
 }

@@ -70,12 +70,12 @@
           <!-- invisible navbar brand to keep toggler-icon to the right -->
           <a class="navbar-brand" href="#"></a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1"
+            aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse" id="navbarNav1">
 
             <ul class="navbar-nav no-dropdown">
               <li class="nav-item">
@@ -186,7 +186,7 @@
               account</button>
             <button type="button" class="btn btn-favourites"><i class="bi-heart"></i><span class="ms-1"></span></button>
             <button type="button" class="btn btn-shopping-cart" @onclick="ShowShoppingCart"><i class="bi-bag"></i><span
-                class="ms-2"></span>$@shoppingCartTotal</button>
+                class="ms-2"></span>$@_shoppingCartTotal</button>
           </div>
         </div>
       </div>
@@ -233,12 +233,12 @@
 
           <!-- Main menu -->
           <div class="menu-desktop">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2"
+              aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
 
               <ul class="navbar-nav no-dropdown">
                 <li class="nav-item">
@@ -248,12 +248,12 @@
 
               <ul class="navbar-nav dropdowns">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Shop
                     <b class="caret"></b>
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown7">
                     <li><a class="dropdown-item" href="#">Shop by brand</a></li>
                     <li>
                       <hr class="dropdown-divider">
@@ -263,11 +263,11 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown8" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Products
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown8">
                     <li><a class="dropdown-item" href="#">New Arrivals</a></li>
                     <li><a class="dropdown-item" href="#">Featured Products</a></li>
                     <li><a class="dropdown-item" href="#">Top Sellers</a></li>
@@ -275,11 +275,11 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown9" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Categories
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown9">
                     <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Women}")">@ProductCategory.Women.GetString()</a></li>
                     <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Men}")">@ProductCategory.Men.GetString()</a></li>
                     <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.Kids}")">@ProductCategory.Kids.GetString()</a></li>
@@ -291,11 +291,11 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button"
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown10" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Pages
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown10">
                     <li><a class="dropdown-item" href="@($"shop/{(int)ProductCategory.NoCategory}")">Shop</a></li>
                     <li><a class="dropdown-item" href="shoppingcart">Shopping Cart</a></li>
                   </ul>
@@ -329,7 +329,7 @@
 
 
 @code {
-    public int shoppingCartTotal = 0;
+    private int _shoppingCartTotal = 0;
 
     void ShowShoppingCart()
     {
@@ -338,23 +338,23 @@
 
     public async Task UpdateShoppingCartTotals(ShoppingCartModel shoppingCart)
     {
-        shoppingCartTotal = 0;
+        _shoppingCartTotal = 0;
 
         foreach (var item in shoppingCart.Details)
             if (item.ProductVariant != null)
-                shoppingCartTotal += (int)item.ProductVariant.Price * item.Quantity;
+                _shoppingCartTotal += (int)item.ProductVariant.Price * item.Quantity;
 
         if (shoppingCart.ShippingType != TypeOfShipping.NoValue)
             switch (shoppingCart.ShippingType)
             {
                 case TypeOfShipping.FlatRate:
-                    shoppingCartTotal += Globals.shippingFlatRate;
+                    _shoppingCartTotal += Globals.ShippingFlatRate;
                     break;
                 case TypeOfShipping.Free:
-                    shoppingCartTotal += Globals.shippingFree;
+                    _shoppingCartTotal += Globals.ShippingFree;
                     break;
                 case TypeOfShipping.LocalPickup:
-                    shoppingCartTotal += Globals.shippingLocalPickup;
+                    _shoppingCartTotal += Globals.ShippingLocalPickup;
                     break;
                 default:
                     break;

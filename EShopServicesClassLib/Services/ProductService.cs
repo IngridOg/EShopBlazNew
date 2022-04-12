@@ -43,16 +43,19 @@ public class ProductService : IProductService
 
     public async Task<IEnumerable<ProductModel>> GetProducts()
     {
+        // Returns a list of all products or null.
         return await _http.GetFromJsonAsync<List<ProductModel>>("/api/products");
     }
 
     public async Task<IEnumerable<ProductModel>> GetProducts(int category)
     {
+        // Returns a list of all products in specified category or null.
         return await _http.GetFromJsonAsync<List<ProductModel>>($@"/api/products/GetByCategory/{category}");
     }
 
     public async Task<ProductModel> GetProduct(int id)
     {
+        // Return the product or null.
         return await _http.GetFromJsonAsync<ProductModel>($"/api/products/{id}");
     }
 

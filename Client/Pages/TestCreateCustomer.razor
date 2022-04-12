@@ -5,23 +5,23 @@
 
 
 @code {
-    private CreateCustomerModel customer;
+    private CreateCustomerModel _customer;
 
     [Inject]
     public ICustomerService CustService { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        customer=new();
-        customer.FirstName="Ingrid";
-        customer.LastName="Ögren";
-        customer.Email="ingrid.ogren@gmail.com";
-        customer.PhoneNr="0703344789";
-        customer.StreetAddress= "Ängsvägen 10";
-        customer.ZipCode="68050";
-        customer.City="Ekshärad";
+        _customer=new();
+        _customer.FirstName="Ingrid";
+        _customer.LastName="Ögren";
+        _customer.Email="ingrid.ogren@gmail.com";
+        _customer.PhoneNr="0703344789";
+        _customer.StreetAddress= "Ängsvägen 10";
+        _customer.ZipCode="68050";
+        _customer.City="Ekshärad";
     
 
-        await CustService.CreateCustomer(customer);
+        await CustService.CreateCustomer(_customer);
     }
 }

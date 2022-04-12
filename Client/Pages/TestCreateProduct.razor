@@ -2,9 +2,9 @@
 <h3>TestCreateProduct</h3>
 
 @code {
-    private CreateProductModel product;
-    private CreateProductVariantModel productVariant;
-    private ProductModel newProduct;
+    private CreateProductModel _product;
+    private CreateProductVariantModel _productVariant;
+    private ProductModel _newProduct;
 
     [Inject]
     public IProductService ProdService { get; set; }
