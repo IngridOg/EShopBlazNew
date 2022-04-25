@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zVS732X2iEcEmv5B6ppEj0D9gKkQ5pEOclZn1+dEMOmPmWAffqGurRPKGuGHeWone3UDa6I0VZ7DJ0Xen1iiLQ==",
+  "dgSpecHash": "6eurQWokgE7irONP3zhY+biOao6ZrEXHjRvPEO1aaNi/5vtYyffkv+vKzXlRGJYuJ75yI9vseRnEXR4nSQw4sA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\EShopBlazNew.Client.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,7 @@
     "C:\\Users\\ingri\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\ingri\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\ingri\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\ingri\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.3.nupkg.sha512"
+    "C:\\Users\\ingri\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.4\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.4.nupkg.sha512"
   ],
   "logs": []
 }

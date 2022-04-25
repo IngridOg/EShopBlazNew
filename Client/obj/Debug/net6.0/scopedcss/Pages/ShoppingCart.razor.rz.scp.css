@@ -64,8 +64,9 @@
   height: 65px;
 }
 .productThumb img[b-p6i7mgnv0u] {
-  width: 100%;
   height: 100%;
+  width: auto;
+  object-fit: cover;
 }
 
 .divider[b-p6i7mgnv0u] {
