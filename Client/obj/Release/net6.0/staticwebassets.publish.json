@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "emRJobYQHmAHP9SmRfLRd0AG86uREcvbZJVmx44/4KU=",
+  "Hash": "MzWsw18zXSp5BrsdWq8jmS88rRWpmjeTePMo86rGM2k=",
   "Source": "EShopBlazNew.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -34,12 +34,12 @@
       "OriginalItemSpec": "C:\\Users\\ingri\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.3\\build\\net6.0\\blazor.webassembly.js"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.qprifoiun1.js",
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.4.lmlozwfnhd.js",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\publish\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.6.0.3.qprifoiun1.js",
+      "RelativePath": "_framework/dotnet.6.0.4.lmlozwfnhd.js",
       "AssetKind": "Publish",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.qprifoiun1.js"
+      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.4.lmlozwfnhd.js"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.timezones.blat",
@@ -170,7 +170,7 @@
       "OriginalItemSpec": "obj\\Release\\net6.0\\blazor.publish.boot.json"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\0f7RLqwY.gz",
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\53aFg0m+.gz",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\publish\\wwwroot\\",
@@ -184,24 +184,24 @@
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\0f7RLqwY.gz"
+      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\53aFg0m+.gz"
     },
     {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\hDQZkWHX.gz",
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\BQ0GGIkP.gz",
       "SourceId": "EShopBlazNew.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\publish\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.6.0.3.qprifoiun1.js.gz",
+      "RelativePath": "_framework/dotnet.6.0.4.lmlozwfnhd.js.gz",
       "AssetKind": "Publish",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.qprifoiun1.js",
+      "RelatedAsset": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.4.lmlozwfnhd.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\hDQZkWHX.gz"
+      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\BQ0GGIkP.gz"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\build-gz\\kB3umfRC.gz",
@@ -1035,6 +1035,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\linked\\Microsoft.Extensions.Configuration.dll"
+    },
+    {
+      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\compress\\hSkv8RQ9.br",
+      "SourceId": "EShopBlazNew.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\publish\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.6.0.4.lmlozwfnhd.js.br",
+      "AssetKind": "Publish",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.4.lmlozwfnhd.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.4.lmlozwfnhd.js"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\compress\\I1NGnX2C.br",
@@ -1936,23 +1953,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\linked\\System.Linq.dll"
-    },
-    {
-      "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\compress\\zRoy6Uk6.br",
-      "SourceId": "EShopBlazNew.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\publish\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.6.0.3.qprifoiun1.js.br",
-      "AssetKind": "Publish",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.qprifoiun1.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "br",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.3.qprifoiun1.js"
     },
     {
       "Identity": "C:\\Users\\ingri\\Documents\\DotNetUtbildning\\EShopBlazNew\\Client\\obj\\Release\\net6.0\\linked\\EShopBlazNew.Client.dll",

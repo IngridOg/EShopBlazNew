@@ -39,20 +39,8 @@
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
-.content-area .card .std-price[b-bdzfad2hph] {
-  font-size: 14px;
-}
-.content-area .card .actual-price[b-bdzfad2hph] {
-  font-size: 18px;
-  font-weight: 500;
-  color: #20d3c2;
-}
 .content-area .card:hover .image img[b-bdzfad2hph] {
   transform: scale(1.1);
-}
-.content-area img[b-bdzfad2hph] {
-  min-width: 100%;
-  min-height: 100%;
 }
 
 @media (min-width: 768px) {
